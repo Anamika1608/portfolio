@@ -11,7 +11,7 @@ const jakarta = Plus_Jakarta_Sans({
 const crimson = Crimson_Pro({
   variable: "--font-crimson",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["300", "400", "700"],
 });
 
 const jetbrains = JetBrains_Mono({

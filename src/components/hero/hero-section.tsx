@@ -1,19 +1,53 @@
-"use client"
+"use client";
 
 export function HeroSection() {
-    return (
-        <section className="w-full max-w-5xl mx-auto px-6 md:px-12 py-16 md:py-24">
-            <h1 className="text-4xl md:text-5xl font-medium mb-6 font-crimson">
-                Hello, let's build
-            </h1>
-            <p className="text-2xl md:text-3xl font-medium mb-8">
-                <span className="accent-text font-jakarta">digital experiences</span> that are
-                <span className="accent-text"> intuitive</span> and feel
-                <span className="accent-text"> alive</span> 
-            </p>
-            <p className="text-base md:text-lg text-muted-foreground max-w-2xl">
-                On my journey, I've crafted scalable systems, dynamic user interfaces, and seamless backend architectures — turning ideas into impactful realities.
-            </p>
-        </section>
-    )
+  return (
+    <section className="ml-20 max-w-4xl px-6 md:px-12 py-16 md:py-24 font-crimson text-4xl tracking-tight leading-snug">
+      <h1 className="font-medium">
+        Hey, I'm Anamika Aggarwal
+      </h1>
+      
+      {/* First Paragraph */}
+      <p className="font-medium mb-8">
+        a
+        <span className="bg-[#DAF0FF] text-[#003CAE] px-1 ml-2 font-medium mr-1">
+          full stack developer
+        </span>
+        crafting things that are
+        <span className="flex items-center flex-wrap gap-2">
+          <span className="italic">scalable</span>
+          <img
+            src="/hero/sun.svg"
+            alt="sun icon"
+            className="w-6 h-6 animate-spin-slow"
+          />
+          <span className="not-italic">and</span>
+          <span className="italic">smooth</span>
+          <img
+            src="/hero/flower.svg"
+            alt="flower icon"
+            className="w-6 h-6 animate-spin-slow"
+          />
+        </span>
+      </p>
+
+      {/* Second Paragraph */}
+      <p className="font-medium mb-8">
+        I've also
+        <span className="bg-[#FFF3DA] text-[#A85800] px-1 ml-2 font-medium mr-1">
+          won multiple hackathons
+        </span>
+        and worked with
+        <br />
+        <span className="bg-[#E9FFD9] text-[#2B7500] px-1  font-medium mr-1">
+        3 startups
+        </span>
+        where I led and built the product from scratch reducing latency and AI costs.
+      </p>
+
+      <p className="text-sm md:text-xl text-gray-800 max-w-2xl mt-6 tracking-tight leading-normal">
+        On my journey, I've crafted scalable systems, dynamic user interfaces, and seamless backend architectures — turning ideas into impactful realities.
+      </p>
+    </section>
+  );
 }
