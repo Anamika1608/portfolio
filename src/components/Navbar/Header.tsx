@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ThemeToggle } from "@/components/theme-toggle"
+import { ThemeToggle } from "@/components/Navbar/ThemeToggle"
 
 export function Header() {
     return (

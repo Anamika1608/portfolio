@@ -2,7 +2,7 @@
 
 export function HeroSection() {
   return (
-    <section className="ml-20 max-w-4xl px-6 md:px-12 py-16 md:py-24 font-crimson text-4xl tracking-tight leading-snug">
+    <section className="ml-20 max-w-4xl px-6 md:px-12 py-16 md:py-10 font-crimson text-4xl tracking-tight leading-snug">
       <h1 className="font-medium">
         Hey, I'm Anamika Aggarwal
       </h1>
