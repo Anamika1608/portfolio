@@ -1,3 +1,6 @@
+// components/FeaturedProjects/ProjectCard.types.ts
+export type ProjectVariant = 'small' | 'medium' | 'large' | 'wide' | 'tall' | 'default';
+
 export interface ProjectCardProps {
   title: string;
   description: string;
@@ -5,5 +8,5 @@ export interface ProjectCardProps {
   imageUrl: string;
   liveUrl?: string;
   repoUrl?: string;
-  size: 'small' | 'large';
+  variant: ProjectVariant;
 }

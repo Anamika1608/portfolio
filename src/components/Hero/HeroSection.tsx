@@ -2,7 +2,7 @@
 
 export function HeroSection() {
   return (
-    <section className="ml-20 max-w-4xl px-6 md:px-12 py-16 md:py-10 font-crimson text-4xl tracking-tight leading-snug">
+    <section className="ml-5 lg:ml-20 max-w-4xl px-6 md:px-12 py-16 md:py-10 font-crimson text-4xl tracking-tight leading-snug">
       <h1 className="font-medium">
         Hey, I'm Anamika Aggarwal
       </h1>
@@ -46,7 +46,7 @@ export function HeroSection() {
       </p>
 
       <p className="text-sm md:text-xl text-gray-800 max-w-2xl mt-6 tracking-tight leading-normal">
-        On my journey, I've crafted scalable systems, dynamic user interfaces, and seamless backend architectures — turning ideas into impactful realities.
+        On my journey, I've developed scalable systems, dynamic user interfaces, and seamless backend architectures — turning ideas into impactful realities.
       </p>
     </section>
   );
