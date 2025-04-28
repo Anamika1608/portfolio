@@ -42,7 +42,10 @@ export const ProjectCard = ({
 
       {/* Content section */}
       <div className="p-4 flex flex-col flex-grow">
-        <h3 className="text-lg font-bold text-gray-900 mb-2">{title}</h3>
+        <h3 className="text-lg font-semibold text-gray-900 mb-2 font-jakarta tracking-tight">
+          {title}
+        </h3>
+
         <p className="text-sm text-gray-600 mb-4 flex-grow">{description}</p>
 
         {/* Links */}
