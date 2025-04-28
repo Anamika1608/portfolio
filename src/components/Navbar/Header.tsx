@@ -8,7 +8,7 @@ export function Header() {
         <header className="flex items-center justify-between w-full py-6 px-6 md:px-12">
             <div className="flex items-center space-x-2">
                 <Link href="/" className="text-2xl">
-                    <span role="img" aria-label="Emoji" className="text-3xl">A</span>
+                    <span role="img" aria-label="Emoji" className="text-3xl"></span>
                 </Link>
             </div>
             <div className="flex items-center space-x-4">
