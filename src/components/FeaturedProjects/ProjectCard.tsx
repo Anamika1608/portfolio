@@ -15,7 +15,7 @@ export const ProjectCard = ({
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden h-full flex flex-col">
       {/* Tech stack pills at the top */}
-      <div className="p-3 flex gap-2 flex-wrap">
+      {/* <div className="p-3 flex gap-2 flex-wrap">
         {techStack.map((tech, index) => (
           <span
             key={index}
@@ -24,7 +24,7 @@ export const ProjectCard = ({
             {tech}
           </span>
         ))}
-      </div>
+      </div> */}
 
       {/* Project image - fixed ratio container */}
       <div className="px-2">

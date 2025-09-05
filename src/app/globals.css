@@ -77,7 +77,7 @@
   --sidebar-accent: oklch(0.97 0 0);
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-ring: oklch(0.708 0 0);
- 
+
 }
 
 .dark {
@@ -116,8 +116,10 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%; /* #fbfbfb */
-    --foreground: 240 10% 21%; /* #31313a */
+    --background: 0 0% 98%;
+    /* #fbfbfb */
+    --foreground: 240 10% 21%;
+    /* #31313a */
     --card: 0 0% 98%;
     --card-foreground: 240 10% 21%;
     --popover: 0 0% 98%;
@@ -128,7 +130,8 @@
     --secondary-foreground: 240 5.9% 10%;
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
-    --accent: 59 54% 50%; /* #ccca32 */
+    --accent: 59 54% 50%;
+    /* #ccca32 */
     --accent-foreground: 240 5.9% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -138,8 +141,10 @@
   }
 
   .dark {
-    --background: 240 10% 21%; /* #33333c */
-    --foreground: 0 0% 98%; /* #fbfbfb */
+    --background: 240 10% 21%;
+    /* #33333c */
+    --foreground: 0 0% 98%;
+    /* #fbfbfb */
     --card: 240 10% 21%;
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 21%;
@@ -150,7 +155,8 @@
     --secondary-foreground: 0 0% 98%;
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
-    --accent: 59 54% 50%; /* #cdcb33 */
+    --accent: 59 54% 50%;
+    /* #cdcb33 */
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
@@ -165,15 +171,20 @@
     @apply bg-background text-foreground;
   }
 
- 
+  ::selection {
+    @apply bg-[#95E78E] text-black;
+  }
+
 }
 
 @layer utilities {
   .accent-text {
     @apply text-[#ccca32] dark:text-[#cdcb33];
   }
+
   .animate-spin-slow {
-    animation: spin 15s linear infinite; /* Adjust time as you wish */
+    animation: spin 15s linear infinite;
+    /* Adjust time as you wish */
   }
 }
 
@@ -181,6 +192,7 @@
   from {
     transform: scaleX(0);
   }
+
   to {
     transform: scaleX(1);
   }
