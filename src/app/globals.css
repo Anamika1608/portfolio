@@ -201,3 +201,17 @@
 .animate-slide-bg {
   animation: slideBg 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
+
+@font-face {
+  font-family: "GloryLake";
+  src: url("/fonts/GloryLake.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Branding";
+  src: url("/fonts/Branding.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

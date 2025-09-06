@@ -9,26 +9,35 @@ interface ProjectGridProps {
 
 export const ProjectGrid = ({ projects }: ProjectGridProps) => {
   const displayProjects = projects.slice(0, 5);
+  const containerRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const [isStacked, setIsStacked] = useState(false);
   const [stackProgress, setStackProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!sectionRef.current) return;
+      if (!sectionRef.current || !containerRef.current) return;
 
-      const rect = sectionRef.current.getBoundingClientRect();
+      const containerRect = containerRef.current.getBoundingClientRect();
+      const sectionRect = sectionRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       
-      // Start stacking when section reaches the top of viewport
-      const stackThreshold = windowHeight * 0.3; 
-      const isInStackZone = rect.top <= stackThreshold && rect.bottom > 0;
+      // Start stacking when container reaches the top of viewport
+      const stackThreshold = windowHeight * 0.3;
+      
+      // Only be sticky while we're within the container bounds
+      const isInStackZone = containerRect.top <= stackThreshold && 
+                           containerRect.bottom > windowHeight * 0.7 &&
+                           sectionRect.top <= stackThreshold;
       
       setIsStacked(isInStackZone);
       
-      // Calculate stack progress for smooth animations
+      // Calculate stack progress based on container scroll position
       if (isInStackZone) {
-        const progress = Math.max(0, Math.min(1, (stackThreshold - rect.top) / (windowHeight * 0.4)));
+        const containerHeight = containerRect.height;
+        const scrollableArea = containerHeight - windowHeight;
+        const scrolled = Math.max(0, stackThreshold - containerRect.top);
+        const progress = Math.max(0, Math.min(1, scrolled / Math.max(scrollableArea * 0.3, 100)));
         setStackProgress(progress);
       } else {
         setStackProgress(0);
@@ -42,15 +51,16 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
   }, []);
 
   return (
-    <>
-      {/* Spacer div to maintain layout flow */}
-      <div className="" />
-      
+    <div 
+      ref={containerRef}
+      className="relative"
+    >
       {/* Sticky section with stacking effect */}
       <section
         ref={sectionRef}
         className={`
-          sticky top-0 z-50 transition-all duration-700 ease-out
+          ${isStacked ? 'sticky top-0 z-10' : 'relative'} 
+          transition-all duration-700 ease-out
           ${isStacked ? 'transform-gpu' : ''}
         `}
         style={{
@@ -109,80 +119,39 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
             className="px-4 md:px-6 lg:px-10 xl:px-20 pb-8 sm:pb-10
                        transition-transform duration-700 ease-out"
             style={{
-              transform: `translateY(${stackProgress * 8}px) scale(${1 - stackProgress * 0.03})`,
+              transform: `translateY(${stackProgress * 8}px)`,
             }}
           >
             {/* Custom grid for specific breakpoints */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              {/* First project */}
-              <div 
-                className="col-span-1 transition-all duration-700 ease-out"
-                style={{
-                  transform: `translateY(${stackProgress * 3}px)`,
-                  opacity: 1 - stackProgress * 0.1,
-                }}
-              >
-                {displayProjects[0] && (
-                  <ProjectCard {...displayProjects[0]} variant="default" />
-                )}
-              </div>
-              
-              {/* Second project */}
-              <div 
-                className="col-span-1 transition-all duration-700 ease-out"
-                style={{
-                  transform: `translateY(${stackProgress * 6}px)`,
-                  opacity: 1 - stackProgress * 0.1,
-                }}
-              >
-                {displayProjects[1] && (
-                  <ProjectCard {...displayProjects[1]} variant="default" />
-                )}
-              </div>
-              
-              {/* Third project */}
-              <div 
-                className="col-span-1 transition-all duration-700 ease-out"
-                style={{
-                  transform: `translateY(${stackProgress * 4}px)`,
-                  opacity: 1 - stackProgress * 0.1,
-                }}
-              >
-                {displayProjects[2] && (
-                  <ProjectCard {...displayProjects[2]} variant="default" />
-                )}
-              </div>
-              
-              {/* Fourth project */}
-              <div 
-                className="col-span-1 transition-all duration-700 ease-out"
-                style={{
-                  transform: `translateY(${stackProgress * 7}px)`,
-                  opacity: 1 - stackProgress * 0.1,
-                }}
-              >
-                {displayProjects[3] && (
-                  <ProjectCard {...displayProjects[3]} variant="default" />
-                )}
-              </div>
-              
-              {/* Fifth project */}
-              <div 
-                className="col-span-1 md:col-span-2 lg:col-span-1 transition-all duration-700 ease-out"
-                style={{
-                  transform: `translateY(${stackProgress * 5}px)`,
-                  opacity: 1 - stackProgress * 0.1,
-                }}
-              >
-                {displayProjects[4] && (
-                  <ProjectCard {...displayProjects[4]} variant="default" />
-                )}
-              </div>
+              {/* Projects with staggered animations */}
+              {displayProjects.slice(0, 5).map((project, index) => {
+                const transforms = [3, 6, 4, 7, 5]; // Different transform values for each project
+                const colSpanClasses = [
+                  "col-span-1",
+                  "col-span-1", 
+                  "col-span-1",
+                  "col-span-1",
+                  "col-span-1 md:col-span-2 lg:col-span-1"
+                ];
+                
+                return (
+                  <div 
+                    key={index}
+                    className={`${colSpanClasses[index]} transition-all duration-700 ease-out`}
+                    style={{
+                      transform: `translateY(${stackProgress * transforms[index]}px)`,
+                      opacity: 1 - stackProgress * 0.1,
+                    }}
+                  >
+                    <ProjectCard {...project} variant="default" />
+                  </div>
+                );
+              })}
             </div>
           </div>
-          
         </div>
       </section>
-    </>
+    </div>
   );
 };

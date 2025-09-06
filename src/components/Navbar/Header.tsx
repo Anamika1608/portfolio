@@ -15,7 +15,7 @@ export function Header() {
             ></div>
 
 
-            <div className="relative flex items-center justify-between mx-24 py-4">
+            <div className="relative flex items-center justify-between mx-24 mr-36 py-4">
                 {/* Left side - Logo */}
                 <div className="flex items-center">
                     <img
