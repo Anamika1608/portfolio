@@ -5,7 +5,7 @@ import { projectData } from "@/components/FeaturedProjects/FeaturedProjects";
 import { workExperiencesData } from "@/components/WorkExperience/workExperiencesData"
 import WorkExperience from "@/components/WorkExperience/WorkExperience"
 import OpenSource from "@/components/OpenSource/OpenSource";
-
+import MoreProjects from "@/components/MoreProjects/MoreProjects";
 export default function Home() {
   return (
     <div>
@@ -14,6 +14,7 @@ export default function Home() {
       <ProjectGrid projects={projectData} />
       <WorkExperience experiences={workExperiencesData} />
       <OpenSource />
+      <MoreProjects />
     </div>
   );
 }

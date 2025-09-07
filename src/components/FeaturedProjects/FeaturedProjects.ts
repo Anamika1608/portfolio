@@ -3,7 +3,7 @@ import { ProjectCardProps } from "./ProjectCard.types";
 export const projectData: ProjectCardProps[] = [
   {
     title: "Safire",
-    description: "A  AI-powered Browser Extension with a dashboard to detect, hide, and manage real-time harassment messages on social-media.",
+    description: "An  AI-powered Browser Extension with a dashboard to detect, hide, and manage real-time harassment messages on social-media.",
     techStack: ["Plasmo", "Upstash", "Puppeteer", "NextJS", "ExpressJS", "Gemini"],
     imageUrl: "/featured-projects/safire.png",
     liveUrl: "https://safire-five.vercel.app",

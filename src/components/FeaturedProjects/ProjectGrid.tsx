@@ -93,7 +93,6 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
             rotateX(${stackProgress * 2}deg)
           `,
           transformOrigin: 'center top',
-          filter: `brightness(${1 - stackProgress * 0.1})`,
         }}
       >
         {/* Background with smooth reveal animation */}
@@ -131,7 +130,7 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
               }}
             >
               <h2 className="text-xl sm:text-2xl font-crimson font-medium">
-                My Best Works
+                Featured Projects
               </h2>
             </div>
           </div>

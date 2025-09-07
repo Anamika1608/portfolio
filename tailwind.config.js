@@ -14,6 +14,7 @@ module.exports = {
         jetbrains: ['var(--font-jetbrains)'],
         vt323: ['var(--font-vt323)'],
         garamond: ['var(--font-garamond)'],
+        ibmPlex: ['var(--font-ibm-plex)'],
       },
       colors: {
         background: 'hsl(var(--background))',

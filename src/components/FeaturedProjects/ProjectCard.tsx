@@ -29,14 +29,27 @@ export const ProjectCard = ({
       {/* Project image - fixed ratio container */}
       <div className="px-2 pt-2">
         <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
-          <Image
-            src={imageUrl}
-            alt={title}
-            fill
-            sizes="(max-width: 640px) 90vw, (max-width: 768px) 45vw, (max-width: 1024px) 30vw, 25vw"
-            // style={{ objectFit: 'cover' }}
-            className="transition-transform hover:scale-105 duration-300 "
-          />
+          {liveUrl ? (
+            <Link href={liveUrl} target="_blank">
+              <Image
+                src={imageUrl}
+                alt={title}
+                fill
+                sizes="(max-width: 640px) 90vw, (max-width: 768px) 45vw, (max-width: 1024px) 30vw, 25vw"
+                // style={{ objectFit: 'cover' }}
+                className="transition-transform duration-300 "
+              />
+            </Link>
+          ) : (
+            <Image
+              src={imageUrl}
+              alt={title}
+              fill
+              sizes="(max-width: 640px) 90vw, (max-width: 768px) 45vw, (max-width: 1024px) 30vw, 25vw"
+              // style={{ objectFit: 'cover' }}
+              className="transition-transform duration-300 "
+            />
+          )}
         </div>
       </div>
 
