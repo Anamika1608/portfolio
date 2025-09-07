@@ -1,9 +1,10 @@
 import { Header } from "@/components/Navbar/Header";
 import { HeroSection } from "@/components/Hero/HeroSection";
 import { ProjectGrid } from "@/components/FeaturedProjects/ProjectGrid";
-import { projectData } from "@/static/FeaturedProjects";
+import { projectData } from "@/components/FeaturedProjects/FeaturedProjects";
 import { workExperiencesData } from "@/components/WorkExperience/workExperiencesData"
 import WorkExperience from "@/components/WorkExperience/WorkExperience"
+import OpenSource from "@/components/OpenSource/OpenSource";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroSection />
       <ProjectGrid projects={projectData} />
       <WorkExperience experiences={workExperiencesData} />
+      <OpenSource />
     </div>
   );
 }

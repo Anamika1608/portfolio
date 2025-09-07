@@ -172,7 +172,7 @@
   }
 
   ::selection {
-    @apply bg-[#95E78E] text-black;
+    @apply bg-[#E8D3FE] text-black;
   }
 
 }

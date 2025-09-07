@@ -1,4 +1,4 @@
-import { ProjectCardProps } from "../components/FeaturedProjects/ProjectCard.types";
+import { ProjectCardProps } from "./ProjectCard.types";
 
 export const projectData: ProjectCardProps[] = [
   {
@@ -28,24 +28,31 @@ export const projectData: ProjectCardProps[] = [
     repoUrl: "https://github.com/Sukoon-A-Mental-Wellness-Platform/website",
     variant: "default"
   },
-  // that connects 100+ users in real-time with automatic presence notifications
+  // {
+  //   title: "Connect-Me",
+  //   description: "Scalable video conferencing web-app using SFU to connect 100+ concurrent live users.",
+  //   techStack: ["React", "Socket.io", "WebRTC", "MediaSoup", "Express"],
+  //   imageUrl: "/featured-projects/skymate.png",
+  //   liveUrl: "#",
+  //   repoUrl: "https://github.com/Anamika1608/Connect-Me",
+  //   variant: "default"
+  // },
   {
-    title: "Connect-Me",
-    description: "Scalable video conferencing web-app using SFU to connect 100+ concurrent live users.",
+    title: "Echosphere",
+    description: "An AI-Based voice powered PG community platform that connects residents and owners with auto calling to technicians.",
     techStack: ["React", "Socket.io", "WebRTC", "MediaSoup", "Express"],
-    imageUrl: "/featured-projects/skymate.png",
-    liveUrl: "#",
-    repoUrl: "https://github.com/Anamika1608/Connect-Me",
+    imageUrl: "/featured-projects/echosphere.png",
+    liveUrl: "https://echosphere-gray.vercel.app/",
+    repoUrl: "https://github.com/Anamika1608/Echosphere",
     variant: "default"
   },
   {
     title: "Jivika",
     description: "A PWA having interactive 3D models of herbal plants, along with detailed information about each plant.",
     techStack: ["React", "PWA", "Three.js", "GLB 3D Models", "Blender"],
-    imageUrl: "/featured-projects/stamprino.png",
-    liveUrl: "https://jivika-orpin.vercel.app",
+    imageUrl: "/featured-projects/jivika.jpg",
+    liveUrl: "https://jivika-plants.vercel.app",
     repoUrl: "https://github.com/Anamika1608/Jivika",
     variant: "default"
   },
-
 ];
