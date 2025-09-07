@@ -13,7 +13,7 @@ function OpenSource() {
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="flex justify-start transition-transform duration-700 ease-out mt-12 mb-8"
+        className="flex justify-start transition-transform duration-700 ease-out mt-12 mb-4"
       >
         <div className="border border-black rounded-full px-3 sm:px-4 py-1 transition-all duration-700 ease-out hover:shadow-md">
           <h2 className="text-xl sm:text-2xl font-crimson font-medium">

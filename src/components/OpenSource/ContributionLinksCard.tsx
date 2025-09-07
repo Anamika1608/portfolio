@@ -31,7 +31,7 @@ const ContributionLinksCard = ({ githubUrl, docUrl, index }: Props) => {
 
         <LinkSection
           href={githubUrl}
-          title="All my code and contributions"
+          title="All my contributions PRs"
           linkText="View on GitHub"
           icon={<FaGithub size={18} />}
           variant="primary" // Dark button style
