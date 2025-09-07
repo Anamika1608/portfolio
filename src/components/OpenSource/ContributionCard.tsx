@@ -22,7 +22,7 @@ const ContributionCard: React.FC<ContributionCardProps> = ({ contribution, index
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
-            className="relative w-full max-w-sm mx-auto p-4" // Added horizontal padding
+            className="relative w-full max-w-md p-4" // Added horizontal padding
         >
             {/* Background/Border Card with the company image */}
             <div className="absolute inset-x-4 bottom-0 top-[24px] bg-white rounded-2xl shadow-md overflow-hidden"> {/* Adjusted inset to account for padding */}
@@ -33,7 +33,7 @@ const ContributionCard: React.FC<ContributionCardProps> = ({ contribution, index
                     <img
                         src={logo}
                         alt={title}
-                        className="max-w-full max-h-full object-contain p-6"
+                        className="max-w-full max-h-full object-contain p-6 scale-90"
                         onError={(e) => {
                             // Fallback if image fails to load
                             e.currentTarget.style.display = 'none';
@@ -69,7 +69,7 @@ const ContributionCard: React.FC<ContributionCardProps> = ({ contribution, index
 
                     </div>
 
-                    <div className="flex justify-between items-center mt-6 pt-4 border-t border-gray-100">
+                    <div className="flex justify-between items-center mt-4 pt-4 border-t border-gray-100">
 
                         <div className="flex items-center gap-2 bg-gray-50 text-gray-600 rounded-full px-3 py-1">
                             <CalendarDays className="h-4 w-4 text-gray-400" />

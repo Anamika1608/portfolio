@@ -13,6 +13,7 @@ module.exports = {
         crimson: ['var(--font-crimson)'],
         jetbrains: ['var(--font-jetbrains)'],
         vt323: ['var(--font-vt323)'],
+        garamond: ['var(--font-garamond)'],
       },
       colors: {
         background: 'hsl(var(--background))',

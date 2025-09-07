@@ -41,7 +41,7 @@ export const openSourceContributions: OpenSourceContribution[] = [
         logo: '/work-experience/logos/cilium.png',
         title: 'Features & bug fixes (13 PRs)',
         organization: 'Cilium.io',
-        description: 'Integrated dark theme, fixed major bugs to improve user experience and analysed website for SEO, AEO and AIO optimization.',
+        description: 'Integrated dark theme, fixed major bugs to improve ux and analysed website for SEO, AEO & AIO optimization.',
         technologies: ['Gatsby', 'React', 'Tailwind CSS', 'SEO', 'JavaScript'],
         achievements: [
             '13 PRs successfully merged',

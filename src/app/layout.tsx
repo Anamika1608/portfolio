@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Crimson_Pro, JetBrains_Mono, VT323 } from "next/font/google";
+import { Plus_Jakarta_Sans, Crimson_Pro, JetBrains_Mono, VT323, EB_Garamond } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 
@@ -25,6 +25,12 @@ const vt323 = VT323({
   weight: ["400"],
 });
 
+const garamond = EB_Garamond({
+  variable: "--font-garamond",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata: Metadata = {
   title: "Anamika | Portfolio",
   description: "Developing things, but with more style.",
@@ -37,7 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${jakarta.variable} ${crimson.variable} ${jetbrains.variable} ${vt323.variable} antialiased`}>
+      <body className={`${jakarta.variable} ${crimson.variable} ${jetbrains.variable} ${vt323.variable} ${garamond.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

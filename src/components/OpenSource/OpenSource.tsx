@@ -1,9 +1,10 @@
 "use client"
 
-import React from 'react'
+import React from 'react';
 import { motion } from 'framer-motion';
 import ContributionCard from './ContributionCard';
 import { openSourceContributions } from './OpenSourceData';
+import ContributionLinksCard from './ContributionLinksCard'; 
 
 function OpenSource() {
   return (
@@ -21,18 +22,26 @@ function OpenSource() {
         </div>
       </motion.div>
 
-      {/* Cards Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="flex flex-wrap justify-center md:justify-start items-center gap-3 -ml-3">
         {openSourceContributions.map((contribution, index) => (
-          <ContributionCard
-            key={contribution.id}
-            contribution={contribution}
-            index={index}
-          />
+          <React.Fragment key={contribution.id}>
+            <ContributionCard
+              contribution={contribution}
+              index={index}
+            />
+            
+            {index === 0 && (
+              <ContributionLinksCard
+                githubUrl="https://github.com/Anamika1608/my-oss-contributions" 
+                docUrl="https://docs.google.com/document/d/1Rnlqb7fQ8YahFWe1r-_R1ufJh5j8e6CJzo4phvOBpGg/edit?usp=sharing"
+                index={index + 0.5} 
+              />
+            )}
+          </React.Fragment>
         ))}
       </div>
     </div>
   )
 }
 
-export default OpenSource
+export default OpenSource;

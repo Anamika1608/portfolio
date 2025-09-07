@@ -41,6 +41,7 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --font-crimson: var(--font-crimson);
+  --font-garamond: var(--font-garamond);
   --font-jetbrains: var(--font-jetbrains);
   --font-vt323: var(--font-vt323);
   --font-jakarta: var(--font-jakarta);
