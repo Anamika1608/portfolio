@@ -8,7 +8,7 @@ interface ProjectGridProps {
 }
 
 export const ProjectGrid = ({ projects }: ProjectGridProps) => {
-  const displayProjects = projects.slice(0, 5);
+  const displayProjects = projects.slice(0, 4);
   const containerRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const [isStacked, setIsStacked] = useState(false);
@@ -50,6 +50,29 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Bento grid layout configuration
+   const bentoLayouts = [
+    {
+      // Project 1 - Safire (top left rectangle)
+      className: "col-span-2 row-span-1",
+      transform: 3
+    },
+    {
+      // Project 2 - Echosphere (bottom left rectangle)
+      className: "col-span-2 row-span-1", 
+      transform: 6
+    },
+    {
+      // Project 3 - Mobile Apps (right tall card, spans 2 rows)
+      className: "col-span-2 row-span-2",
+      transform: 4
+    },
+    {
+      className: "col-span-2 row-span-2",
+      transform: 4
+    }
+  ];
+
   return (
     <div 
       ref={containerRef}
@@ -87,8 +110,7 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
           {/* Animated background overlay for stacking effect */}
           <div 
             className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent 
-                       transition-opacity duration-700 ease-out pointer-events-none"
-            style={{ opacity: stackProgress * 0.3 }}
+                        duration-700 ease-out pointer-events-none"
           />
           
           {/* Responsive section header */}
@@ -109,7 +131,7 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
               }}
             >
               <h2 className="text-xl sm:text-2xl font-crimson font-medium">
-                Featured Projects
+                My Best Works
               </h2>
             </div>
           </div>
@@ -122,29 +144,23 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
               transform: `translateY(${stackProgress * 8}px)`,
             }}
           >
-            {/* Custom grid for specific breakpoints */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              {/* Projects with staggered animations */}
-              {displayProjects.slice(0, 5).map((project, index) => {
-                const transforms = [3, 6, 4, 7, 5]; // Different transform values for each project
-                const colSpanClasses = [
-                  "col-span-1",
-                  "col-span-1", 
-                  "col-span-1",
-                  "col-span-1",
-                  "col-span-1 md:col-span-2 lg:col-span-1"
-                ];
+            {/* Bento Grid Layout */}
+            <div className="grid grid-cols-4 gap-4 sm:gap-6">
+              {/* Projects with bento layout and staggered animations */}
+              {displayProjects.map((project, index) => {
+                const layout = bentoLayouts[index];
                 
                 return (
                   <div 
                     key={index}
-                    className={`${colSpanClasses[index]} transition-all duration-700 ease-out`}
+                    className={`${layout?.className} transition-all duration-700 ease-out`}
                     style={{
-                      transform: `translateY(${stackProgress * transforms[index]}px)`,
-                      opacity: 1 - stackProgress * 0.1,
+                      transform: `translateY(${stackProgress * layout?.transform}px)`,
                     }}
                   >
-                    <ProjectCard {...project} variant="default" />
+                    <div className="w-full h-full">
+                      <ProjectCard {...project} variant="default" />
+                    </div>
                   </div>
                 );
               })}
