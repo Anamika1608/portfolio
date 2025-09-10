@@ -1,6 +1,5 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react';
-import { ProjectCard } from '../FeaturedProjects/ProjectCard';
 import { ProjectCardProps } from '../FeaturedProjects/ProjectCard.types';
 
 interface ProjectGridProps {
