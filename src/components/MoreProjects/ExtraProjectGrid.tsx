@@ -112,41 +112,22 @@ export const ExtraProjectGrid = ({ projects }: ProjectGridProps) => {
                             transform: `translateY(${stackProgress * 8}px)`,
                         }}
                     >
-                        {/* Video container - positioned on the left with original dimensions */}
-                        <div className="mb-6 sm:mb-8 flex justify-start">
+                        {/* Video container - positioned side by side with proper spacing */}
+                        <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row justify-between items-start gap-4 sm:gap-6">
                             <video
                                 src="/featured-projects/jivika.mp4"
-                                className="max-w-md w-auto h-auto rounded-xl shadow-lg"
+                                className="w-full sm:w-auto sm:max-w-md h-auto rounded-xl shadow-lg flex-shrink-0"
                                 autoPlay
                                 loop
                                 muted
                             />
-                        </div>
-                        
-                        {/* Bento Grid Layout */}
-                        <div className="grid grid-cols-2 auto-rows-[12rem] sm:auto-rows-[14rem] md:auto-rows-[16rem] lg:auto-rows-[18rem] gap-4 sm:gap-6">
-                            {/* Projects with bento layout and staggered animations */}
-                            {displayProjects.map((project, index) => {
-                                const layout = bentoLayouts[index];
-
-                                return (
-                                    <div
-                                        key={index}
-                                        className={`${layout.className} transition-all duration-700 ease-out`}
-                                        style={{
-                                            transform: `translateY(${stackProgress * layout.transform}px)`,
-                                            opacity: 1 - stackProgress * 0.1,
-                                        }}
-                                    >
-                                        {/* <div className="w-full h-full">
-                      <ProjectCard {...project} variant="default" />
-                    </div> */}
-
-
-
-                                    </div>
-                                );
-                            })}
+                            <video
+                                src="/featured-projects/web3Wallet.mp4"
+                                className="w-full max-w-3xl h-auto rounded-xl shadow-lg flex-shrink-0"
+                                autoPlay
+                                loop
+                                muted
+                            />
                         </div>
                     </div>
                 </div>

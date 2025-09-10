@@ -20,21 +20,29 @@ export const projectData: ProjectCardProps[] = [
     variant: "default"
   },
   {
-    title: "Skymate",
-    description: "Smart weather platform offering personalized forecasts, lifestyle recommendations, and interactive user engagement.",
-    techStack: ["React", "Express", "MongoDB", "Cloudinary", "Weather API", "Groq"],
-    images: [
-      '/featured-projects/detoxie/home.png',
-      '/featured-projects/detoxie/permission.png',
-      '/featured-projects/detoxie/settings.png',
-      '/featured-projects/detoxie/welcome.png'
-    ],
-    imageUrl: "/featured-projects/skymate.png",
-    liveUrl: "https://skymate.vercel.app",
-    repoUrl: "https://github.com/Anamika1608/SkyMate",
+    title: "Detoxie",
+    description: "An app to combat Instagram Reels Addiction by tracking usage and displaying breaks overlay by integrating Android Accessibility Service and custom native modules.",
+    techStack: ["React", "React Native", "Expo", "Android Accessibility Service", "Custom Native Modules"],
+    imageUrl: "/featured-projects/detoxie.png",
+    liveUrl: "https://detoxie.vercel.app",
+    repoUrl: "https://github.com/Anamika1608/Detoxie",
     variant: "default"
   },
-
+  // {
+  //   title: "Skymate",
+  //   description: "Smart weather platform offering personalized forecasts, lifestyle recommendations, and interactive user engagement.",
+  //   techStack: ["React", "Express", "MongoDB", "Cloudinary", "Weather API", "Groq"],
+  //   images: [
+  //     '/featured-projects/detoxie/home.png',
+  //     '/featured-projects/detoxie/permission.png',
+  //     '/featured-projects/detoxie/settings.png',
+  //     '/featured-projects/detoxie/welcome.png'
+  //   ],
+  //   imageUrl: "/featured-projects/skymate.png",
+  //   liveUrl: "https://skymate.vercel.app",
+  //   repoUrl: "https://github.com/Anamika1608/SkyMate",
+  //   variant: "default"
+  // },
   {
     title: "Sukoon",
     description: "Mental wellness platform offering empathetic AI conversations, dream analysis with digital detox detoxification",
