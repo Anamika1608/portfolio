@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 
 
-@custom-variant dark (&:is(.dark *));
+/* Dark variant removed: enforce light theme only */
 
 @theme inline {
   --color-background: var(--background);
@@ -82,37 +82,7 @@
 
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-ring: oklch(0.556 0 0);
-}
+/* .dark overrides removed */
 
 
 
@@ -143,29 +113,7 @@
     --radius: 0.5rem;
   }
 
-  .dark {
-    --background: 240 10% 21%;
-    /* #33333c */
-    --foreground: 0 0% 98%;
-    /* #fbfbfb */
-    --card: 240 10% 21%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 21%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 59 54% 50%;
-    /* #cdcb33 */
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --input: 240 3.7% 15.9%;
-    --ring: 59 54% 50%;
-  }
+  /* .dark variables removed */
 }
 
 @layer base {
@@ -182,7 +130,7 @@
 
 @layer utilities {
   .accent-text {
-    @apply text-[#ccca32] dark:text-[#cdcb33];
+    @apply text-[#ccca32];
   }
 
   .animate-spin-slow {
