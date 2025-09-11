@@ -38,8 +38,8 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Anamika | Portfolio",
-  description: "Developing things, but with more style.",
+  title: "Hi, I'm Anamika",
+  description: "Developing things that makes sense.",
 };
 
 export default function RootLayout({

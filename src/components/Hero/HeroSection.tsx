@@ -5,7 +5,7 @@ export function HeroSection() {
     <section className="site-container max-w-4xl pb-10 sm:pb-16 font-crimson text-2xl sm:text-3xl md:text-4xl tracking-tight leading-snug">
 
       <h1 className="font-medium">
-        Hey, I'm Anamika Aggarwal
+        Hi, I'm Anamika Aggarwal
       </h1>
 
       {/* First Paragraph */}
