@@ -8,41 +8,33 @@ export const workExperiencesData: WorkExperienceItem[] = [
       period: 'Jun 2025 - Aug 2025',
       companyLogo: '/work-experience/logos/tuf.png',
       description: [
-        'Designed user interfaces for iOS applications with millions of downloads',
-        'Conducted user research and usability testing to inform design decisions',
-        'Worked closely with engineering teams to ensure design feasibility'
+        'Revamped a complex side panel into a clean, extensible experience the team can iterate on quickly.',
+        'Built Focus Mode, which users loved and which meaningfully improved the user\'s learning experience.',
+        'Led a POC for Debugger Mode for the C++ Editor by integrating GDB and Docker.'
         ]
     },
     {
       id: '2',
-      role: 'Full Stack Developer Intern ',
+      role: 'Full Stack Developer Intern',
       company: 'Mazinda',
       period: 'Dec 2024 - Feb 2025',
       companyLogo: '/work-experience/logos/mazinda.svg', 
       description: [
-        'Led design strategy for core product features serving 1M+ users',
-        'Collaborated with cross-functional teams to deliver pixel-perfect experiences',
-        'Mentored junior designers and established design system standards'
+        'Engineered a delivery partner app with resumable onboarding and real-time GPS tracking, reducing order assignment time by 30%.',
+        'Centralized delivery operations by constructing an admin dashboard leveraging real-time geolocation data to monitor 200+ daily deliveries.',
+        'Built and optimized the order assignment backend, ensuring dynamic reassignment when a delivery partner rejects an order, maintaining alarm triggers.'
         ]
     },
     {
       id: '3',
-      role: 'Freelance Full Stack Developer',
+      role: 'Full Stack Developer',
       company: 'I am Better than me',
       period: 'Sept 2024 - Dec 2024',
       companyLogo: 'https://c.animaapp.com/m8nag6vuQg1Dnq/img/frame-217.svg', 
       description: [
-        'Designed e-commerce solutions for merchant dashboard',
-        'Improved conversion rates by 25% through UX optimizations',
-        'Created design documentation and component libraries'
+        'Optimized backend performance by integrating Cloudinary for file uploads, reducing latency by 30%.',
+        'Architected real-time collaboration features using Socket.io and Mediasoup, enabling video conferencing for 100+ concurrent users.',
+        'Developed user authentication system with two-factor authentication via Twilio and Nodemailer, reducing failed login attempts by 40%.'
         ]
-    },
-    // {
-    //   id: '4',
-    //   role: 'Design and research',
-    //   company: 'Amazon',
-    //   period: '2020 - 2024',
-    //   companyLogo: '/logos/amazon.png', // Replace with actual logo path
-    //     // No description for this one
-    // }
+    }
 ];
