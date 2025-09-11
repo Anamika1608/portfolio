@@ -2,7 +2,15 @@
 import React from 'react';
 import Image from 'next/image';
 
-const BlogListItem = ({ title, description, imageUrl, blogUrl }) => {
+
+type BlogListItemProps = {
+  title: string;
+  description: string;
+  imageUrl: string;
+  blogUrl: string;
+};
+
+const BlogListItem = ({ title, description, imageUrl, blogUrl }: BlogListItemProps) => {
   return (
     <a
       href={blogUrl}

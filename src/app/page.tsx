@@ -8,6 +8,7 @@ import OpenSource from "@/components/OpenSource/OpenSource";
 import MoreProjects from "@/components/MoreProjects/MoreProjects";
 import Reccomendations from "@/components/Reccomendations/Reccomendations";
 import Blogs from "@/components/Blogs/Blogs";
+import Contact from "@/components/Contact/Contact";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <MoreProjects />
       <Blogs/>
       <Reccomendations/>
+      <Contact/>
     </div>
   );
 }

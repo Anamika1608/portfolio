@@ -19,14 +19,14 @@ export function Header() {
             <div className="relative flex items-center justify-between mx-24 mr-36 py-4">
                 {/* Left side - Logo */}
                 <div className="flex items-center">
-                    <img
+                    {/* <img
                         decoding="async"
                         sizes="107px"
                         srcSet="https://framerusercontent.com/images/3lYPMe8OoTsaZYercDHn5VshvGs.gif?scale-down-to=512 512w,https://framerusercontent.com/images/3lYPMe8OoTsaZYercDHn5VshvGs.gif 747w"
                         src="https://framerusercontent.com/images/3lYPMe8OoTsaZYercDHn5VshvGs.gif"
                         alt="Logo"
                         className=""
-                    />
+                    /> */}
                 </div>
 
                 {/* Right side - Navigation */}
