@@ -46,9 +46,9 @@ export function HeroSection() {
 
       {/* Updated Hackathon Paragraph Color */}
       <p className="font-medium mb-6 sm:mb-8">
-        I'm also a {" "}
+        I've also{" "}
         <span className="bg-[#F0FDFA] text-[#0F766E] px-1 font-medium">
-          winner/finalist of 6 hackathons.
+          won 3 hackathons.
         </span>
       </p>
 
