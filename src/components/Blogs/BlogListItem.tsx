@@ -8,9 +8,11 @@ type BlogListItemProps = {
   description: string;
   imageUrl: string;
   blogUrl: string;
+  date: string;
+  readTimeMinutes: number;
 };
 
-const BlogListItem = ({ title, description, imageUrl, blogUrl }: BlogListItemProps) => {
+const BlogListItem = ({ title, description, imageUrl, blogUrl, date, readTimeMinutes }: BlogListItemProps) => {
   return (
     <a
       href={blogUrl}
@@ -42,6 +44,11 @@ const BlogListItem = ({ title, description, imageUrl, blogUrl }: BlogListItemPro
           <p className="text-gray-700 leading-relaxed">
             {description}
           </p>
+          <div className="mt-2 text-sm text-gray-500 flex items-center gap-2">
+            <span>{new Date(date).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+            <span>•</span>
+            <span>{readTimeMinutes} min read</span>
+          </div>
         </div>
 
       </div>

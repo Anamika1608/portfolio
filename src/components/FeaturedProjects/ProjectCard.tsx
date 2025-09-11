@@ -13,7 +13,7 @@ export const ProjectCard = ({
   variant
 }: ProjectCardProps) => {
   return (
-    <div className="bg-[#f0ebf2] rounded-lg shadow-md overflow-hidden h-full flex flex-col">
+    <div className="bg-[#F9FAFB] rounded-lg shadow-md overflow-hidden h-full flex flex-col">
       {/* Tech stack pills at the top */}
       {/* <div className="p-3 flex gap-2 flex-wrap">
         {techStack.map((tech, index) => (
@@ -54,7 +54,7 @@ export const ProjectCard = ({
       </div>
 
       {/* Content section */}
-      <div className="p-4 flex flex-col flex-grow bg-[#f0ebf2]">
+      <div className="p-4 flex flex-col flex-grow bg-[#F9FAFB]">
         <h3 className="text-lg font-semibold text-gray-900 mb-2 font-jakarta tracking-tight">
           {title}
         </h3>
@@ -67,7 +67,7 @@ export const ProjectCard = ({
             <Link
               href={liveUrl}
               target="_blank"
-              className="flex items-center gap-1 bg-gray-50 text-gray-800 px-3 py-1.5 rounded-full text-sm font-medium hover:bg-gray-100 transition"
+              className="flex items-center gap-1 border border-gray-200 text-gray-800 px-3 py-1.5 rounded-full text-sm font-medium bg-white transition"
             >
               <FiExternalLink className="text-sm" />
               <span>Live</span>
@@ -77,7 +77,7 @@ export const ProjectCard = ({
             <Link
               href={repoUrl}
               target="_blank"
-              className="flex items-center gap-1 bg-gray-50 text-gray-800 px-3 py-1.5 rounded-full text-sm font-medium hover:bg-gray-100 transition"
+              className="flex items-center gap-1  bg-white text-gray-800 border border-gray-200  px-3 py-1.5 rounded-full text-sm font-medium transition"
             >
               <FiGithub className="text-sm" />
               <span>Code</span>

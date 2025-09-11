@@ -83,8 +83,7 @@ function Contact() {
       <div className='text-gray-800 bg-white py-16'>
         <div className="site-container">
 
-          {/* ====== Contact Section ====== */}
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-10">
 
             {/* --- Left Column: Info --- */}
             <div className="flex flex-col justify-center">
@@ -206,7 +205,7 @@ function Contact() {
                   <button 
                     type="submit" 
                     disabled={isSubmitting}
-                    className="w-full sm:w-auto px-8 py-2 text-lg font-semibold text-black bg-transparent border-2 border-black hover:bg-black hover:text-white transition-all duration-300 rounded-full disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full sm:w-auto px-8 py-2 text-lg font-semibold text-[#2C2C2C] bg-transparent border-2 border-[#2C2C2C] hover:bg-[#2C2C2C] hover:text-white transition-all duration-300 rounded-full disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? "Sending..." : "Submit"}
                   </button>

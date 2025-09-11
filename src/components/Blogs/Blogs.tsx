@@ -37,6 +37,8 @@ function Blogs() {
                                 description={blog.description}
                                 imageUrl={blog.imageUrl}
                                 blogUrl={blog.blogUrl}
+                                date={blog.date}
+                                readTimeMinutes={blog.readTimeMinutes}
                             />
                         </div>
                     ))}

@@ -21,7 +21,7 @@ export const projectData: ProjectCardProps[] = [
   },
   {
     title: "Detoxie",
-    description: "An app to combat Instagram Reels Addiction by tracking usage and displaying breaks overlay by integrating Android Accessibility Service and custom native modules.",
+    description: "An app to overcome Instagram Reels Addiction by tracking usage and displaying breaks overlay of to-dos and personal vision photos.",
     techStack: ["React", "React Native", "Expo", "Android Accessibility Service", "Custom Native Modules"],
     imageUrl: "/featured-projects/detoxie.png",
     liveUrl: "https://detoxie.vercel.app",
@@ -45,7 +45,7 @@ export const projectData: ProjectCardProps[] = [
   // },
   {
     title: "Sukoon",
-    description: "Mental wellness platform offering empathetic AI conversations, dream analysis with digital detox detoxification",
+    description: "Mental wellness platform offering empathetic AI conversations, dream analysis with digital detox detoxification.",
     techStack: ["React", "TailwindCSS", "Framer", "Gsap", "Hume", "Gemini"],
     imageUrl: "/featured-projects/sukoon.png",
     liveUrl: "https://sukoon-space.vercel.app",

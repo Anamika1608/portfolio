@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CalendarDays } from 'lucide-react'; // Using lucide-react for icons
+import { FaGithub } from 'react-icons/fa';
+import { CgFileDocument } from 'react-icons/cg';
 import { OpenSourceContribution } from './OpenSourceData';
 
 
@@ -78,6 +80,33 @@ const ContributionCard: React.FC<ContributionCardProps> = ({ contribution, index
                             </span>
                         </div>
 
+                        <div className="flex items-center gap-2">
+                            {contribution.id === 'consul-democracy' && (
+                                <a
+                                    href="https://github.com/Anamika1608/my-oss-contributions"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors"
+                                    aria-label="View on GitHub"
+                                >
+                                    <FaGithub className="h-3.5 w-3.5" />
+                                    <span className="hidden sm:inline">Contributions</span>
+                                </a>
+                            )}
+
+                            {contribution.id === 'cilium' && (
+                                <a
+                                    href="https://docs.google.com/document/d/1Rnlqb7fQ8YahFWe1r-_R1ufJh5j8e6CJzo4phvOBpGg/edit?usp=sharing"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full bg-white border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-colors"
+                                    aria-label="Read Analysis"
+                                >
+                                    <CgFileDocument className="h-3.5 w-3.5" />
+                                    <span className="hidden sm:inline">Analysis</span>
+                                </a>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
