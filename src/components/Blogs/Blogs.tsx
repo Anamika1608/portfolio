@@ -15,7 +15,7 @@ function Blogs() {
                 transition={{ duration: 0.5 }}
                 className="lg:w-1/3 mb-10 lg:mb-0 lg:pr-8" // Added right padding for spacing
             >
-                <h2 className="text-5xl font-semibold font-crimson text-[#2C2C2C] sticky top-28">
+                <h2 className="text-3xl sm:text-5xl  font-semibold font-crimson text-[#2C2C2C] sticky top-28">
                     Most Recent
                     <br />
                     Blogs I wrote

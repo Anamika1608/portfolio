@@ -126,8 +126,23 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
               transform: `translateY(${stackProgress * 8}px)`,
             }}
           >
-            {/* Bento Grid Layout */}
-            <div className="grid grid-cols-4 gap-4 sm:gap-6">
+            {/* Mobile: Flex Column Layout */}
+            <div className="flex flex-col gap-4 sm:hidden">
+              {displayProjects.map((project, index) => (
+                <div 
+                  key={`mobile-${index}`}
+                  className="w-full transition-all duration-700 ease-out"
+                  style={{
+                    transform: `translateY(${stackProgress * 3}px)`,
+                  }}
+                >
+                  <ProjectCard {...project} variant="default" />
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop/Tablet: Bento Grid Layout */}
+            <div className="hidden sm:grid grid-cols-4 gap-4 sm:gap-6">
               {/* Projects with bento layout and staggered animations */}
               {displayProjects.map((project, index) => {
                 const layout = bentoLayouts[index];

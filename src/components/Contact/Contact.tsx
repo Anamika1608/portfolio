@@ -87,7 +87,7 @@ function Contact() {
 
             {/* --- Left Column: Info --- */}
             <div className="flex flex-col justify-center">
-              <h2 className="text-4xl md:text-5xl font-semibold mb-4 font-crimson text-[#2C2C2C]">Contact Me</h2>
+              <h2 className="text-3xl md:text-5xl font-semibold mb-4 font-crimson text-[#2C2C2C]">Contact Me</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out.
               </p>
