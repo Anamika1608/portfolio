@@ -8,7 +8,7 @@ import ContributionLinksCard from './ContributionLinksCard';
 
 function OpenSource() {
   return (
-    <div className="mx-5 lg:ml-5 xl:ml-20 px-2 sm:px-6 md:px-12">
+    <div className="site-container">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -30,13 +30,13 @@ function OpenSource() {
               index={index}
             />
             
-            {index === 0 && (
+            {/* {index === 0 && (
               <ContributionLinksCard
                 githubUrl="https://github.com/Anamika1608/my-oss-contributions" 
                 docUrl="https://docs.google.com/document/d/1Rnlqb7fQ8YahFWe1r-_R1ufJh5j8e6CJzo4phvOBpGg/edit?usp=sharing"
                 index={index + 0.5} 
               />
-            )}
+            )} */}
           </React.Fragment>
         ))}
       </div>

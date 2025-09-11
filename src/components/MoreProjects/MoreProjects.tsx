@@ -5,7 +5,7 @@ import { projectData } from '../FeaturedProjects/FeaturedProjects'
 function MoreProjects() {
     return (
         <div>
-            <div className="font-ibm-plex text-3xl sm:text-2xl font-medium mt-12 mb-6 mx-5 lg:ml-5 xl:ml-20 px-2 sm:px-6 md:px-12 flex items-center">
+            <div className="site-container font-ibm-plex text-3xl sm:text-2xl font-medium mt-12 mb-6 flex items-center">
                 <div className="w-3 h-3 bg-black mr-2 rounded-xs"></div>
                 More stuff I made
             </div>

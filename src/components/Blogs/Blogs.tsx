@@ -6,7 +6,7 @@ import BlogListItem from './BlogListItem';
 
 function Blogs() {
     return (
-        <div className="mx-5 lg:mx-auto max-w-7xl px-4 sm:px-6 md:px-8 tracking-tight leading-snug flex flex-col lg:flex-row lg:gap-20"> {/* Adjusted max-width and gap */}
+        <div className="site-container tracking-tight leading-snug flex flex-col lg:flex-row lg:gap-20"> {/* Adjusted max-width and gap */}
 
             {/* ====== Left Column: Title ====== */}
             <motion.div
@@ -15,7 +15,7 @@ function Blogs() {
                 transition={{ duration: 0.5 }}
                 className="lg:w-1/3 mb-10 lg:mb-0 lg:pr-8" // Added right padding for spacing
             >
-                <h2 className="text-5xl font-semibold font-crimson text-gray-900 sticky top-28">
+                <h2 className="text-5xl font-semibold font-crimson text-[#2C2C2C] sticky top-28">
                     Most Recent
                     <br />
                     Blogs I wrote

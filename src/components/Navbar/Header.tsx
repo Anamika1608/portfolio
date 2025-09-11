@@ -16,7 +16,7 @@ export function Header() {
                 }}
             ></div>
 
-            <div className="relative flex items-center justify-between mx-24 mr-36 py-4">
+            <div className="site-container relative flex items-center justify-between py-4">
                 {/* Left side - Logo */}
                 <div className="flex items-center">
                     {/* <img
@@ -41,7 +41,7 @@ export function Header() {
                         >
                             
                             {/* Overlay for better text readability */}
-                            <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+                            <div className="absolute inset-0 bg-[#2C2C2C] bg-opacity-30"></div>
                         </div>
 
                         <Link
@@ -49,7 +49,7 @@ export function Header() {
                             className={`relative text-sm font-jakarta transition-all duration-300 px-6 py-3 rounded-full flex items-center group ${
                                 isHovered 
                                     ? 'text-white shadow-2xl transform scale-105' 
-                                    : 'bg-black text-white hover:bg-gray-900'
+                                    : 'bg-[#2C2C2C] text-white hover:bg-gray-900'
                             }`}
                             onMouseEnter={() => setIsHovered(true)}
                             onMouseLeave={() => setIsHovered(false)}

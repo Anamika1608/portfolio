@@ -76,7 +76,7 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
   return (
     <div 
       ref={containerRef}
-      className="relative"
+      className="relative site-container"
     >
       {/* Sticky section with stacking effect */}
       <section
@@ -95,27 +95,11 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
           transformOrigin: 'center top',
         }}
       >
-        {/* Background with smooth reveal animation */}
         <div 
-          className="pt-6 sm:pt-8 bg-[#f8f8f8] rounded-xl sm:rounded-3xl mx-4 sm:mx-6 md:mx-10 
-                     transition-all duration-700 ease-out relative overflow-hidden"
-          style={{
-            boxShadow: isStacked 
-              ? `0 ${20 + stackProgress * 30}px ${40 + stackProgress * 20}px rgba(0,0,0,${0.1 + stackProgress * 0.15})`
-              : '0 10px 30px rgba(0,0,0,0.05)',
-            borderRadius: `${12 + stackProgress * 12}px`,
-          }}
         >
-          {/* Animated background overlay for stacking effect */}
-          <div 
-            className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent 
-                        duration-700 ease-out pointer-events-none"
-          />
-          
           {/* Responsive section header */}
           <div 
-            className="flex justify-start mb-3 sm:mb-4 ml-4 md:ml-5 lg:ml-10 xl:ml-20
-                       transition-transform duration-700 ease-out"
+            className="flex justify-start mb-3 sm:mb-4 transition-transform duration-700 ease-out"
             style={{
               transform: `translateY(${stackProgress * 5}px)`,
             }}
@@ -130,15 +114,14 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
               }}
             >
               <h2 className="text-xl sm:text-2xl font-crimson font-medium">
-                Featured Projects
+                My Best Works
               </h2>
             </div>
           </div>
           
           {/* Responsive container with proper margins */}
           <div 
-            className="px-4 md:px-6 lg:px-10 xl:px-20 pb-8 sm:pb-10
-                       transition-transform duration-700 ease-out"
+            className="pb-8 sm:pb-10 transition-transform duration-700 ease-out"
             style={{
               transform: `translateY(${stackProgress * 8}px)`,
             }}

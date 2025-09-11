@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 function Reccomendations() {
     return (
-        <div className="mx-5 lg:ml-5 xl:ml-20 px-2 sm:px-6 md:px-12 mb-20">
+        <div className="site-container mb-20">
             {/* Header */}
             <motion.div
                 initial={{ opacity: 0, y: -20 }}

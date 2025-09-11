@@ -80,15 +80,15 @@ function Contact() {
 
   return (
     <>
-      <div className='text-gray-800 bg-white py-16 px-6 sm:px-12'>
-        <div className="max-w-7xl mx-auto">
+      <div className='text-gray-800 bg-white py-16'>
+        <div className="site-container">
 
           {/* ====== Contact Section ====== */}
           <section className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
 
             {/* --- Left Column: Info --- */}
             <div className="flex flex-col justify-center">
-              <h2 className="text-4xl md:text-5xl font-semibold mb-4 font-crimson">Contact Me</h2>
+              <h2 className="text-4xl md:text-5xl font-semibold mb-4 font-crimson text-[#2C2C2C]">Contact Me</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out.
               </p>
@@ -120,7 +120,7 @@ function Contact() {
                   </a>
 
                   <a
-                    href="https://linkedin.com/in/your-profile"
+                    href="https://linkedin.com/in/anamikaaggarwal12"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="relative group text-gray-800 hover:text-black transition-colors duration-300"

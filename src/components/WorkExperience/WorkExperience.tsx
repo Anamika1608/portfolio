@@ -120,7 +120,7 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({
   };
 
   return (
-    <div className="mx-5 lg:ml-5 xl:ml-20 px-2 sm:px-6 md:px-12 mt-10">
+    <div className="site-container mt-10">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -133,7 +133,7 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({
         </div>
       </motion.div>
 
-      <div className="space-y-4 mr-4 sm:mr-8 lg:mr-16">
+      <div className="space-y-4">
         {experiences.map((exp, index) => {
           const isExpanded = expandedItems.has(exp.id);
           const hasDescription = exp.description && exp.description.length > 0;

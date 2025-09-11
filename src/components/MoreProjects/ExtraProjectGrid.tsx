@@ -76,7 +76,7 @@ export const ExtraProjectGrid = ({ projects }: ProjectGridProps) => {
     return (
         <div
             ref={containerRef}
-            className="relative"
+            className="relative site-container"
         >
             {/* Sticky section with stacking effect */}
             <section
@@ -98,31 +98,28 @@ export const ExtraProjectGrid = ({ projects }: ProjectGridProps) => {
             >
                 {/* Background with smooth reveal animation */}
                 <div
-                    className="pt-6 sm:pt-8 mx-4 sm:mx-6 md:mx-10 
-                     transition-all duration-700 ease-out relative overflow-hidden"
-
+                    className="pt-6 sm:pt-8 transition-all duration-700 ease-out relative overflow-hidden"
                 >
 
                     {/* Responsive container with proper margins */}
                     <div
-                        className="px-4 md:px-6 lg:px-10 xl:px-20 pb-8 sm:pb-10
-                       transition-transform duration-700 ease-out"
+                        className="pb-8 sm:pb-10 transition-transform duration-700 ease-out"
                         style={{
                             transform: `translateY(${stackProgress * 8}px)`,
                         }}
                     >
-                        {/* Video container - positioned side by side with proper spacing */}
+                        {/* Video container - positioned side by side with proper spacing and sizing */}
                         <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row justify-between items-start gap-4 sm:gap-6">
                             <video
                                 src="/featured-projects/jivika.mp4"
-                                className="w-full sm:w-auto sm:max-w-md h-auto rounded-xl shadow-lg flex-shrink-0"
+                                className="w-full sm:w-[45%] md:w-[42%] lg:w-[40%] h-auto rounded-xl shadow-lg flex-shrink-0"
                                 autoPlay
                                 loop
                                 muted
                             />
                             <video
                                 src="/featured-projects/web3Wallet.mp4"
-                                className="w-full max-w-3xl h-auto rounded-xl shadow-lg flex-shrink-0"
+                                className="w-full sm:w-[52%] md:w-[55%] lg:w-[58%] h-auto rounded-xl shadow-lg flex-shrink-0"
                                 autoPlay
                                 loop
                                 muted
@@ -132,5 +129,5 @@ export const ExtraProjectGrid = ({ projects }: ProjectGridProps) => {
                 </div>
             </section>
         </div>
-    );
-};
+    )
+}

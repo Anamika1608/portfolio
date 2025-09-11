@@ -189,6 +189,11 @@
     animation: spin 15s linear infinite;
     /* Adjust time as you wish */
   }
+  
+  /* Consistent horizontal container across the site */
+  .site-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 md:px-12;
+  }
 }
 
 @keyframes slideBg {
