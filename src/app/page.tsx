@@ -7,6 +7,7 @@ import WorkExperience from "@/components/WorkExperience/WorkExperience"
 import OpenSource from "@/components/OpenSource/OpenSource";
 import MoreProjects from "@/components/MoreProjects/MoreProjects";
 import Reccomendations from "@/components/Reccomendations/Reccomendations";
+import Blogs from "@/components/Blogs/Blogs";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <WorkExperience experiences={workExperiencesData} />
       <OpenSource />
       <MoreProjects />
+      <Blogs/>
       <Reccomendations/>
     </div>
   );

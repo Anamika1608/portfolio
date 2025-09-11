@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 function Reccomendations() {
     return (
-        <div className="mx-5 lg:ml-5 xl:ml-20 px-2 sm:px-6 md:px-12">
+        <div className="mx-5 lg:ml-5 xl:ml-20 px-2 sm:px-6 md:px-12 mb-20">
             {/* Header */}
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
@@ -14,7 +14,7 @@ function Reccomendations() {
             >
                 <div className="border border-black rounded-full px-3 sm:px-4 py-1 transition-all duration-700 ease-out hover:shadow-md">
                     <h2 className="text-xl sm:text-2xl font-crimson font-medium">
-                        What people are saying
+                    Words of Appreciation
                     </h2>
                 </div>
             </motion.div>
@@ -64,7 +64,7 @@ function Reccomendations() {
                     <motion.img
                         src="/reccomendations/consul-purple.png"
                         alt="Consul Recommendation"
-                        className="w-full h-auto rounded-xl mt-8 shadow-sm"
+                        className="w-full h-auto rounded-xl mt-5 shadow-sm "
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{
@@ -75,7 +75,7 @@ function Reccomendations() {
                      <motion.img
                         src="/reccomendations/iabtm-green.png"
                         alt="IABTM Recommendation"
-                        className="w-full h-auto rounded-xl mt-10"
+                        className="w-full h-auto rounded-xl mt-10 shadow-sm"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{
