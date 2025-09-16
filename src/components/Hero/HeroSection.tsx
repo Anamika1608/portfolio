@@ -63,7 +63,7 @@ export function HeroSection() {
       <p className="text-sm sm:text-base md:text-2xl text-gray-800 max-w-2xl mt-6 tracking-tight leading-normal">
         I'm open for new opportunities.
         <a
-       href="mailto:anamikaagg07@gmail.com"
+       href="mailto:anamikaagg18@gmail.com"
        className="bg-[#DBEAFE] text-[#1E40AF] px-2 py-1 ml-2 font-medium rounded-md hover:bg-opacity-90 transition-colors"
      >
        Contact Me
