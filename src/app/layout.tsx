@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Crimson_Pro, JetBrains_Mono, VT323, EB_Garamond, IBM_Plex_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -50,6 +51,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${jakarta.variable} ${crimson.variable} ${jetbrains.variable} ${vt323.variable} ${garamond.variable} ${ibmPlexMono.variable} antialiased`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
