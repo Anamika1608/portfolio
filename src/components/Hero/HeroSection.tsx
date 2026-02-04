@@ -14,7 +14,7 @@ export function HeroSection() {
         <span className="bg-[#DAF0FF] text-[#003CAE] px-1 ml-2 font-medium mr-1">
           full stack developer
         </span>
-        crafting things that are
+        building things that are
         <span className="flex items-center flex-wrap gap-2">
           <span className="italic">scalable</span>
           <img
