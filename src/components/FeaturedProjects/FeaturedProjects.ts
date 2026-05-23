@@ -6,7 +6,7 @@ export const projectData: ProjectCardProps[] = [
     description: "An  AI-powered Browser Extension with a dashboard to detect, hide, and manage real-time harassment messages on social-media.",
     techStack: ["Plasmo", "Upstash", "Puppeteer", "NextJS", "ExpressJS", "Gemini"],
     imageUrl: "/featured-projects/safire.png",
-    liveUrl: "https://safire-five.vercel.app",
+    liveUrl: "https://trysafire.com",
     repoUrl: "https://github.com/Anamika1608/Harassment-Saver-Project",
     variant: "default"
   },
@@ -23,7 +23,7 @@ export const projectData: ProjectCardProps[] = [
     title: "Detoxie",
     description: "An app to overcome Instagram Reels Addiction by tracking usage and displaying breaks overlay of to-dos and personal vision photos.",
     techStack: ["React", "React Native", "Expo", "Android Accessibility Service", "Custom Native Modules"],
-    imageUrl: "/featured-projects/detoxie.png",
+    imageUrl: "/featured-projects/detoxie.jpeg",
     liveUrl: "https://detoxie.vercel.app",
     repoUrl: "https://github.com/Anamika1608/Detoxie",
     variant: "default"
@@ -44,12 +44,12 @@ export const projectData: ProjectCardProps[] = [
   //   variant: "default"
   // },
   {
-    title: "Sukoon",
-    description: "Mental wellness platform offering empathetic AI conversations, dream analysis with digital detox detoxification.",
-    techStack: ["React", "TailwindCSS", "Framer", "Gsap", "Hume", "Gemini"],
-    imageUrl: "/featured-projects/sukoon.png",
-    liveUrl: "https://sukoon-space.vercel.app",
-    repoUrl: "https://github.com/Sukoon-A-Mental-Wellness-Platform/website",
+    title: "Hyperpersona",
+    description: "Agentic ecommerce recommendation engine for real-time product rankings, pair-up suggestions, and traceable MCP/API workflows.",
+    techStack: ["FastAPI", "Python", "React", "TypeScript", "MCP", "Strands", "AWS"],
+    imageUrl: "/featured-projects/hyperpersona.jpeg",
+    liveUrl: "https://try-hyperpersona.vercel.app/",
+    repoUrl: "https://github.com/Anamika1608/Hyperpersona",
     variant: "default"
   },
   // {
