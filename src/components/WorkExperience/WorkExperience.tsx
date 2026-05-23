@@ -60,7 +60,7 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({
         </div>
       </motion.div>
 
-      <div className="mt-5 border-b border-black/10 divide-y divide-black/10">
+      <div className="mt-5">
         {experiences.map((experience, index) => {
           const isExpanded = expandedItems.has(experience.id);
           const hasDescription =
@@ -105,7 +105,7 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({
                       )}
                     </div>
                     <div className="min-w-0">
-                      <h3 className="font-crimson text-2xl font-medium leading-tight text-[#1f1f1f] sm:text-3xl">
+                      <h3 className="font-crimson text-xl font-medium leading-tight text-[#1f1f1f] sm:text-2xl">
                         {experience.role}
                       </h3>
                       <p className="font-ibm-plex text-sm text-black/55">
@@ -220,7 +220,7 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({
                                     : { opacity: 1, y: 0 }
                                 }
                                 transition={{ delay: itemIndex * 0.05 }}
-                                className="border-t border-black/10 pt-4 first:border-t-0 first:pt-0"
+                                className="pt-2 first:pt-0"
                               >
                                 <p className="text-base leading-relaxed text-black/75 sm:text-[17px]">
                                   {item}
