@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
       {
         source: "/resume",
         destination:
-          "https://drive.google.com/file/d/1yaOGQtxjtFj1b9JCN8ii6jX3Xrs8o0Qo/view",
+          "https://drive.google.com/file/d/1R8w70v_TzCwopAgj8olVwOs6IUgqAA-w/view?usp=sharing",
         permanent: true,
       },
       {
