@@ -1,129 +1,56 @@
-"use client"
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { ChevronDown, ChevronUp, Calendar, MapPin, Award, Briefcase } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+"use client";
+
+import React, { useState } from "react";
+import Image from "next/image";
+import { ChevronDown } from "lucide-react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { WorkExperienceItem } from "./types";
 
 interface WorkExperienceProps {
   experiences: WorkExperienceItem[];
   title?: string;
-  displayStyle?: 'bullets' | 'cards' | 'timeline' | 'tags';
 }
+
+const tagStyles = [
+  "bg-[#E9FFD9] text-[#2B7500] border-[#CFEFBD]",
+  "bg-[#DAF0FF] text-[#003CAE] border-[#BBDDF9]",
+  "bg-[#FFF3DA] text-[#A85800] border-[#F0D6A8]",
+  "bg-[#F0FDFA] text-[#0F766E] border-[#B8E6DE]",
+];
+
+const getInitials = (company: string) =>
+  company
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((word) => word[0])
+    .join("")
+    .toUpperCase();
 
 const WorkExperience: React.FC<WorkExperienceProps> = ({
   experiences,
   title = "Work Experience",
-  displayStyle = 'bullets'
 }) => {
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+  const reduceMotion = useReducedMotion();
 
   const toggleExpanded = (id: string) => {
-    const newExpandedItems = new Set(expandedItems);
-    if (newExpandedItems.has(id)) {
-      newExpandedItems.delete(id);
-    } else {
-      newExpandedItems.add(id);
-    }
-    setExpandedItems(newExpandedItems);
-  };
-
-  const renderBulletStyle = (description: string[]) => (
-    <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-lg p-4 border-l-4 border-blue-200">
-      <ul className="space-y-3">
-        {description.map((item, index) => (
-          <motion.li 
-            key={index} 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="text-sm text-gray-700 flex items-start group hover:text-gray-900 transition-colors"
-          >
-            <span className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0 transition-colors"></span>
-            {item}
-          </motion.li>
-        ))}
-      </ul>
-    </div>
-  );
-
-  const renderCardStyle = (description: string[]) => (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-      {description.map((item, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.1 }}
-          className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md hover:border-blue-300 transition-all duration-200"
-        >
-          <div className="flex items-start space-x-2">
-            <Award className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0" />
-            <p className="text-sm text-gray-700 leading-relaxed">{item}</p>
-          </div>
-        </motion.div>
-      ))}
-    </div>
-  );
-
-  const renderTimelineStyle = (description: string[]) => (
-    <div className="relative">
-      <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 to-purple-400"></div>
-      <div className="space-y-4">
-        {description.map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.15 }}
-            className="relative pl-10"
-          >
-            <div className="absolute left-2.5 w-3 h-3 bg-blue-500 rounded-full border-2 border-white shadow-md"></div>
-            <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <p className="text-sm text-gray-700 leading-relaxed">{item}</p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </div>
-  );
-
-  const renderTagStyle = (description: string[]) => (
-    <div className="bg-gray-50 rounded-lg p-4">
-      <div className="flex flex-wrap gap-2">
-        {description.map((item, index) => (
-          <motion.span
-            key={index}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: index * 0.05 }}
-            className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 hover:bg-blue-200 transition-colors cursor-default"
-          >
-            {item}
-          </motion.span>
-        ))}
-      </div>
-    </div>
-  );
-
-  const renderContent = (description: string[]) => {
-    switch (displayStyle) {
-      case 'cards':
-        return renderCardStyle(description);
-      case 'timeline':
-        return renderTimelineStyle(description);
-      case 'tags':
-        return renderTagStyle(description);
-      default:
-        return renderBulletStyle(description);
-    }
+    setExpandedItems((currentItems) => {
+      const nextItems = new Set(currentItems);
+      if (nextItems.has(id)) {
+        nextItems.delete(id);
+      } else {
+        nextItems.add(id);
+      }
+      return nextItems;
+    });
   };
 
   return (
     <div className="site-container mt-10">
       <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={reduceMotion ? false : { opacity: 0, y: -20 }}
+        animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
         className="flex justify-start transition-transform duration-700 ease-out"
       >
         <div className="border border-black rounded-full px-3 sm:px-4 py-1 transition-all duration-700 ease-out hover:shadow-md">
@@ -133,98 +60,181 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({
         </div>
       </motion.div>
 
-      <div className="space-y-4">
-        {experiences.map((exp, index) => {
-          const isExpanded = expandedItems.has(exp.id);
-          const hasDescription = exp.description && exp.description.length > 0;
+      <div className="mt-5 border-b border-black/10 divide-y divide-black/10">
+        {experiences.map((experience, index) => {
+          const isExpanded = expandedItems.has(experience.id);
+          const hasDescription =
+            experience.description && experience.description.length > 0;
+          const isExpandable = experience.isExpandable ?? hasDescription;
+          const panelId = `experience-panel-${experience.id}`;
+          const buttonId = `experience-trigger-${experience.id}`;
 
           return (
-            <motion.div 
-              key={exp.id} 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className={`${!isExpanded ? 'border-b border-gray-200' : ''} mt-4`}
+            <motion.article
+              key={experience.id}
+              initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+              animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.08 }}
+              className="relative"
             >
-              <div
-                className={`flex flex-col sm:flex-row items-start sm:items-center justify-between ${
-                  hasDescription ? 'cursor-pointer hover:bg-gray-50' : ''
-                } px-3 py-2 rounded-lg transition-all duration-200 group`}
-                onClick={hasDescription ? () => toggleExpanded(exp.id) : undefined}
+              <button
+                type="button"
+                id={buttonId}
+                aria-expanded={isExpandable ? isExpanded : undefined}
+                aria-controls={isExpandable ? panelId : undefined}
+                disabled={!isExpandable}
+                onClick={() =>
+                  isExpandable && toggleExpanded(experience.id)
+                }
+                className="group w-full text-left py-4 sm:py-5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black disabled:cursor-default"
               >
-                {/* Role - Full width on mobile, flex-1 on larger screens */}
-                <div className="w-full sm:flex-1 mb-2 sm:mb-0">
-                  <div className="font-normal text-lg sm:text-xl text-gray-900 transition-colors">
-                    {exp.role}
-                  </div>
-                </div>
-
-                {/* Company info - Responsive layout */}
-                <div className="flex items-center justify-start sm:justify-center space-x-3 w-full sm:flex-1 mb-2 sm:mb-0">
-                  {exp.companyLogo && (
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 relative flex-shrink-0">
-                      <Image
-                        src={exp.companyLogo}
-                        alt={`${exp.company} logo`}
-                        fill
-                        className="rounded object-contain"
-                      />
+                <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_14rem] sm:items-center lg:relative">
+                  <div className="flex min-w-0 items-center gap-3">
+                    <div className="relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-black/10 bg-[#FBFAF4] font-ibm-plex text-xs font-semibold text-black/60">
+                      {experience.companyLogo ? (
+                        <Image
+                          src={experience.companyLogo}
+                          alt={`${experience.company} logo`}
+                          fill
+                          className="object-contain p-1.5"
+                        />
+                      ) : (
+                        <span aria-hidden="true">
+                          {getInitials(experience.company)}
+                        </span>
+                      )}
                     </div>
-                  )}
-                  <span className="text-lg sm:text-xl font-normal text-gray-700 transition-colors">
-                    {exp.company}
-                  </span>
-                </div>
-
-                {/* Period and chevron - Right aligned */}
-                <div className="flex items-center justify-between sm:justify-end space-x-2 w-full sm:flex-1">
-                  <div className="flex items-center space-x-2 text-gray-500">
-                    {/* <Calendar className="w-4 h-4" /> */}
-                    <span className="text-sm sm:text-lg font-normal">
-                      {exp.period}
-                    </span>
+                    <div className="min-w-0">
+                      <h3 className="font-crimson text-2xl font-medium leading-tight text-[#1f1f1f] sm:text-3xl">
+                        {experience.role}
+                      </h3>
+                      <p className="font-ibm-plex text-sm text-black/55">
+                        {experience.company}
+                      </p>
+                    </div>
                   </div>
-                  {hasDescription && (
-                    <motion.div 
-                      className="ml-2"
-                      animate={{ rotate: isExpanded ? 180 : 0 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <ChevronDown className="w-5 h-5 text-gray-400 transition-colors" />
-                    </motion.div>
-                  )}
-                </div>
-              </div>
 
-              <AnimatePresence>
-                {hasDescription && isExpanded && (
+                  <div className="flex flex-wrap gap-2 sm:col-span-2 sm:row-start-2 sm:justify-start lg:absolute lg:left-1/2 lg:top-1/2 lg:col-span-1 lg:row-start-1 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:justify-center">
+                    {(experience.tags ?? []).slice(0, 3).map((tag, tagIndex) => (
+                      <span
+                        key={tag}
+                        className={`rounded-md border px-2.5 py-1 font-ibm-plex text-[11px] font-medium uppercase tracking-[0.12em] ${
+                          tagStyles[tagIndex % tagStyles.length]
+                        }`}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center justify-between gap-3 sm:col-start-2 sm:row-start-1">
+                    <span className="whitespace-nowrap font-ibm-plex text-sm text-black/50 sm:text-base">
+                      {experience.period}
+                    </span>
+                    <motion.span
+                      aria-hidden="true"
+                      animate={
+                        reduceMotion
+                          ? undefined
+                          : { rotate: isExpanded ? 180 : 0 }
+                      }
+                      transition={{ duration: 0.2 }}
+                      className={`flex h-8 w-8 items-center justify-center text-black/45 group-hover:text-black ${
+                        isExpandable ? "" : "invisible"
+                      }`}
+                    >
+                      <ChevronDown className="h-4 w-4" />
+                    </motion.span>
+                  </div>
+                </div>
+              </button>
+
+              <AnimatePresence initial={false}>
+                {isExpandable && isExpanded && (
                   <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ 
-                      opacity: 1, 
-                      height: "auto",
-                      transition: {
-                        height: { duration: 0.4, ease: "easeOut" },
-                        opacity: { duration: 0.3, delay: 0.1 }
-                      }
-                    }}
-                    exit={{ 
-                      opacity: 0, 
-                      height: 0,
-                      transition: {
-                        height: { duration: 0.3, ease: "easeIn" },
-                        opacity: { duration: 0.2 }
-                      }
-                    }}
-                    className="overflow-hidden mt-3"
+                    id={panelId}
+                    role="region"
+                    aria-labelledby={buttonId}
+                    initial={reduceMotion ? false : { opacity: 0, height: 0 }}
+                    animate={
+                      reduceMotion
+                        ? undefined
+                        : {
+                            opacity: 1,
+                            height: "auto",
+                            transition: {
+                              height: { duration: 0.34, ease: "easeOut" },
+                              opacity: { duration: 0.22, delay: 0.06 },
+                            },
+                          }
+                    }
+                    exit={
+                      reduceMotion
+                        ? undefined
+                        : {
+                            opacity: 0,
+                            height: 0,
+                            transition: {
+                              height: { duration: 0.24, ease: "easeIn" },
+                              opacity: { duration: 0.16 },
+                            },
+                          }
+                    }
+                    className="overflow-hidden"
                   >
-                    <div className="px-3 pb-2">
-                      {renderContent(exp.description || [])}
+                    <div className="pb-5 sm:pb-6">
+                      <div className="border border-black/10 bg-[#FDFBF5] p-4 sm:p-5">
+                        {experience.summary && (
+                          <p className="max-w-3xl font-crimson text-xl leading-snug text-[#2C2C2C] sm:text-2xl">
+                            {experience.summary}
+                          </p>
+                        )}
+
+                        <div className="mt-5 grid gap-5 lg:grid-cols-[220px_minmax(0,1fr)]">
+                          <aside className="border-b border-black/10 pb-4 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-5">
+                            <p className="font-ibm-plex text-[11px] font-semibold uppercase tracking-[0.2em] text-black/45">
+                              Stack
+                            </p>
+                            <div className="mt-3 flex flex-wrap gap-2">
+                              {(experience.stack ?? []).map((tool) => (
+                                <span
+                                  key={tool}
+                                  className="border border-black/10 bg-white px-2.5 py-1 font-ibm-plex text-xs text-black/65"
+                                >
+                                  {tool}
+                                </span>
+                              ))}
+                            </div>
+                          </aside>
+
+                          <ol className="space-y-4">
+                            {experience.description?.map((item, itemIndex) => (
+                              <motion.li
+                                key={item}
+                                initial={
+                                  reduceMotion ? false : { opacity: 0, y: 12 }
+                                }
+                                animate={
+                                  reduceMotion
+                                    ? undefined
+                                    : { opacity: 1, y: 0 }
+                                }
+                                transition={{ delay: itemIndex * 0.05 }}
+                                className="border-t border-black/10 pt-4 first:border-t-0 first:pt-0"
+                              >
+                                <p className="text-base leading-relaxed text-black/75 sm:text-[17px]">
+                                  {item}
+                                </p>
+                              </motion.li>
+                            ))}
+                          </ol>
+                        </div>
+                      </div>
                     </div>
                   </motion.div>
                 )}
               </AnimatePresence>
-            </motion.div>
+            </motion.article>
           );
         })}
       </div>
