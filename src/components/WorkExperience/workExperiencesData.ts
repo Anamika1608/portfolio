@@ -52,13 +52,13 @@ export const workExperiencesData: WorkExperienceItem[] = [
     companyLogo: "https://c.animaapp.com/m8nag6vuQg1Dnq/img/frame-217.svg",
     summary:
       "Worked across backend performance, realtime collaboration, and authentication for a community product.",
-    tags: ["Realtime", "Backend", "Auth"],
+    tags: ["Realtime", "Backend", "RBAC"],
     stack: ["Socket.io", "Mediasoup", "Cloudinary", "Twilio", "Node.js"],
     impactLabels: ["Optimized", "Architected", "Developed"],
     description: [
       "Optimized backend performance by integrating Cloudinary for file uploads, reducing latency by 30%.",
       "Architected real-time collaboration features using Socket.io and Mediasoup, enabling video conferencing for 100+ concurrent users.",
-      "Developed a user authentication system with two-factor authentication via Twilio and Nodemailer, reducing failed login attempts by 40%.",
+      "Built authentication, RBAC access controls, and two-factor verification with Twilio and Nodemailer, reducing failed login attempts by 40%.",
     ],
   },
 ];
