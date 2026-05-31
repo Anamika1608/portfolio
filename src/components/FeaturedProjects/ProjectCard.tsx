@@ -55,11 +55,11 @@ export const ProjectCard = ({
 
       {/* Content section */}
       <div className="p-4 flex flex-col flex-grow bg-[#F9FAFB]">
-        <h3 className="text-lg font-semibold text-gray-900 mb-2 font-jakarta tracking-tight">
+        <h3 className="font-crimson text-xl font-medium leading-tight text-gray-900 mb-2">
           {title}
         </h3>
 
-        <p className="text-sm text-gray-600 mb-4 flex-grow">{description}</p>
+        <p className="font-ibm-plex text-sm text-gray-600 mb-4 flex-grow">{description}</p>
 
         {/* Links */}
         <div className="flex gap-3 mt-auto">
@@ -67,7 +67,7 @@ export const ProjectCard = ({
             <Link
               href={liveUrl}
               target="_blank"
-              className="flex items-center gap-1 border border-gray-200 text-gray-800 px-3 py-1.5 rounded-full text-sm font-medium bg-white transition"
+              className="flex items-center gap-1 border border-gray-200 text-gray-800 px-3 py-1.5 rounded-full font-ibm-plex text-sm font-medium bg-white transition"
             >
               <FiExternalLink className="text-sm" />
               <span>Live</span>
@@ -77,7 +77,7 @@ export const ProjectCard = ({
             <Link
               href={repoUrl}
               target="_blank"
-              className="flex items-center gap-1  bg-white text-gray-800 border border-gray-200  px-3 py-1.5 rounded-full text-sm font-medium transition"
+              className="flex items-center gap-1  bg-white text-gray-800 border border-gray-200  px-3 py-1.5 rounded-full font-ibm-plex text-sm font-medium transition"
             >
               <FiGithub className="text-sm" />
               <span>Code</span>
