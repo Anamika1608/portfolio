@@ -114,7 +114,7 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
               }}
             >
               <h2 className="text-xl sm:text-2xl font-crimson font-medium">
-                My Best Work
+                Things I Built End-to-End
               </h2>
             </div>
           </div>

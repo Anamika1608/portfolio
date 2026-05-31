@@ -5,30 +5,29 @@ import { ProjectCardProps } from './ProjectCard.types';
 
 export const ProjectCard = ({
   title,
+  category,
+  role,
   description,
   techStack,
+  proofPoints = [],
+  focusAreas = [],
+  featuredMetric,
   imageUrl,
   liveUrl,
   repoUrl,
-  variant
 }: ProjectCardProps) => {
-  return (
-    <div className="bg-[#F9FAFB] rounded-lg shadow-md overflow-hidden h-full flex flex-col">
-      {/* Tech stack pills at the top */}
-      {/* <div className="p-3 flex gap-2 flex-wrap">
-        {techStack.map((tech, index) => (
-          <span
-            key={index}
-            className="px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-full"
-          >
-            {tech}
-          </span>
-        ))}
-      </div> */}
+  const visibleTech = techStack.slice(0, 6);
+  const hiddenTechCount = Math.max(techStack.length - visibleTech.length, 0);
 
-      {/* Project image - fixed ratio container */}
-      <div className="px-2 pt-2">
-        <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
+  return (
+    <div className="group flex h-full flex-col overflow-hidden rounded-lg border border-black/10 bg-[#FDFBF5] shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
+      <div className="p-2">
+        <div className="relative w-full aspect-[16/9] overflow-hidden rounded-md border border-black/5 bg-white">
+          {featuredMetric && (
+            <div className="absolute left-3 top-3 z-10 rounded-md border border-black/10 bg-white/90 px-2.5 py-1 font-ibm-plex text-[11px] font-medium text-black/70 backdrop-blur">
+              {featuredMetric}
+            </div>
+          )}
           {liveUrl ? (
             <Link href={liveUrl} target="_blank">
               <Image
@@ -36,8 +35,7 @@ export const ProjectCard = ({
                 alt={title}
                 fill
                 sizes="(max-width: 640px) 90vw, (max-width: 768px) 45vw, (max-width: 1024px) 30vw, 25vw"
-                // style={{ objectFit: 'cover' }}
-                className="transition-transform duration-300 "
+                className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
               />
             </Link>
           ) : (
@@ -46,28 +44,81 @@ export const ProjectCard = ({
               alt={title}
               fill
               sizes="(max-width: 640px) 90vw, (max-width: 768px) 45vw, (max-width: 1024px) 30vw, 25vw"
-              // style={{ objectFit: 'cover' }}
-              className="transition-transform duration-300 "
+              className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
             />
           )}
         </div>
       </div>
 
-      {/* Content section */}
-      <div className="p-4 flex flex-col flex-grow bg-[#F9FAFB]">
-        <h3 className="text-lg font-semibold text-gray-900 mb-2 font-jakarta tracking-tight">
-          {title}
-        </h3>
+      <div className="flex flex-grow flex-col gap-4 p-4 pt-3 sm:p-5 sm:pt-4">
+        <div>
+          {category && (
+            <p className="mb-1 font-ibm-plex text-[11px] font-semibold uppercase tracking-[0.16em] text-black/45">
+              {category}
+            </p>
+          )}
+          <h3 className="font-crimson text-2xl font-medium leading-tight text-[#1f1f1f]">
+            {title}
+          </h3>
+          {role && (
+            <p className="mt-1 font-ibm-plex text-xs text-black/55">
+              {role}
+            </p>
+          )}
+        </div>
 
-        <p className="text-sm text-gray-600 mb-4 flex-grow">{description}</p>
+        <p className="font-ibm-plex text-sm leading-relaxed text-black/65">
+          {description}
+        </p>
 
-        {/* Links */}
-        <div className="flex gap-3 mt-auto">
+        {proofPoints.length > 0 && (
+          <ul className="space-y-2">
+            {proofPoints.slice(0, 2).map((point) => (
+              <li
+                key={point}
+                className="flex gap-2 font-ibm-plex text-sm leading-relaxed text-black/70"
+              >
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-black/35" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {focusAreas.length > 0 && (
+          <div className="flex flex-wrap gap-x-2 gap-y-1 font-ibm-plex text-xs text-black/45">
+            {focusAreas.map((area, index) => (
+              <span key={area}>
+                {area}
+                {index < focusAreas.length - 1 ? " /" : ""}
+              </span>
+            ))}
+          </div>
+        )}
+
+        <div className="mt-auto space-y-4">
+          <div className="flex flex-wrap gap-2">
+            {visibleTech.map((tech) => (
+              <span
+                key={tech}
+                className="rounded-md border border-black/10 bg-white px-2.5 py-1 font-ibm-plex text-[11px] text-black/65"
+              >
+                {tech}
+              </span>
+            ))}
+            {hiddenTechCount > 0 && (
+              <span className="rounded-md border border-black/10 bg-white px-2.5 py-1 font-ibm-plex text-[11px] text-black/45">
+                +{hiddenTechCount}
+              </span>
+            )}
+          </div>
+
+          <div className="flex gap-3">
           {liveUrl && (
             <Link
               href={liveUrl}
               target="_blank"
-              className="flex items-center gap-1 border border-gray-200 text-gray-800 px-3 py-1.5 rounded-full text-sm font-medium bg-white transition"
+              className="flex items-center gap-1 rounded-md border border-black/10 bg-white px-3 py-1.5 font-ibm-plex text-sm font-medium text-black/75 transition hover:border-black/25 hover:text-black"
             >
               <FiExternalLink className="text-sm" />
               <span>Live</span>
@@ -77,12 +128,13 @@ export const ProjectCard = ({
             <Link
               href={repoUrl}
               target="_blank"
-              className="flex items-center gap-1  bg-white text-gray-800 border border-gray-200  px-3 py-1.5 rounded-full text-sm font-medium transition"
+              className="flex items-center gap-1 rounded-md border border-black/10 bg-white px-3 py-1.5 font-ibm-plex text-sm font-medium text-black/75 transition hover:border-black/25 hover:text-black"
             >
               <FiGithub className="text-sm" />
               <span>Code</span>
             </Link>
           )}
+          </div>
         </div>
       </div>
     </div>
