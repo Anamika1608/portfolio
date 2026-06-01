@@ -3,12 +3,21 @@ import { WorkExperienceItem } from "./types";
 export const workExperiencesData: WorkExperienceItem[] = [
   {
     id: "1",
-    role: "Software Engineer",
+    role: "SWE Intern",
     company: "Zenact",
-    period: "Feb 2026 - Present",
+    period: "Feb 2026 - May-2026",
     companyLogo: "/work-experience/logos/zenact-favicon.png",
     tags: ["Observability", "Backend Infra", "Automation"],
-    isExpandable: false,
+    summary:
+      "Built observability and automation infrastructure for sandbox and device-worker runtimes.",
+    stack: ["Go", "Docker", "OTLP", "AWS", "Temporal", "Axiom"],
+    impactLabels: ["Integrated", "Optimized", "Shipped"],
+    description: [
+      "Integrated an end-to-end OpenTelemetry and Axiom observability pipeline for sandbox and device-worker runtimes, capturing logs and traces across distributed workflows.",
+      "Reduced sandbox worker bootstrap from 12s to 3s by removing blocking OTel readiness waits and pre-warming E2B binaries.",
+      "Shipped Blacksmith multi-arch Docker builds and automated QA assertion/report generation for release confidence.",
+    ],
+    isExpandable: true,
   },
   {
     id: "2",
