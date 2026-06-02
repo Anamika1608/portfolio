@@ -3,7 +3,7 @@ import { WorkExperienceItem } from "./types";
 export const workExperiencesData: WorkExperienceItem[] = [
   {
     id: "1",
-    role: "SWE Intern",
+    role: "Software Engineer",
     company: "Zenact",
     period: "Feb 2026 - May-2026",
     companyLogo: "/work-experience/logos/zenact-favicon.png",
