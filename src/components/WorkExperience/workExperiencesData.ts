@@ -8,7 +8,7 @@ export const workExperiencesData: WorkExperienceItem[] = [
     companyUrl: "https://zenact.ai",
     period: "Feb 2026 — May 2026",
     summary:
-      "Runtime infra for AI-agent sandboxes: observability, security, and CI for device-worker fleets.",
+      "Worked on the runtime infrastructure behind AI-agent sandboxes: observability, security, and CI for sandbox and device workers.",
     description: [
       "Cut sandbox worker bootstrap from 12s to 3s by removing blocking OpenTelemetry waits and pre-warming sandbox binaries.",
       "Shipped OpenTelemetry logs and traces to Axiom across Temporal workflows for sandbox and device workers, in Go.",
@@ -41,6 +41,6 @@ export const workExperiencesData: WorkExperienceItem[] = [
     companyUrl: "https://iambetterthanme.com",
     period: "Sep 2024 — Dec 2024",
     summary:
-      "Built realtime video collaboration for 100+ concurrent users, plus auth, RBAC, and two-factor login.",
+      "Built an agentic flow that generates a personalised growth path for each user, realtime video collaboration using Mediasoup for 100+ concurrent users, plus auth, RBAC, and two-factor login.",
   },
 ];
