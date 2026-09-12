@@ -8,7 +8,7 @@ export const workExperiencesData: WorkExperienceItem[] = [
     companyUrl: "https://zenact.ai",
     period: "Feb 2026 — May 2026",
     summary:
-      "Worked on the runtime infrastructure behind AI-agent sandboxes: observability, security, and CI for sandbox and device workers.",
+      "Runtime infrastructure for AI-agent sandboxes: observability, security, and CI for sandbox and device workers.",
     description: [
       "Cut sandbox worker bootstrap from 12s to 3s by removing blocking OpenTelemetry waits and pre-warming sandbox binaries.",
       "Shipped OpenTelemetry logs and traces to Axiom across Temporal workflows for sandbox and device workers, in Go.",
@@ -23,7 +23,11 @@ export const workExperiencesData: WorkExperienceItem[] = [
     companyUrl: "https://takeuforward.org",
     period: "Jun 2025 — Aug 2025",
     summary:
-      "Built a GDB-backed C++ Debugger Mode and a distraction-free Focus Mode for a 1.5M+ learner platform; engagement up 60%.",
+      "Developer tooling and learning UX for a 1.5M+ learner coding platform.",
+    description: [
+      "Led the POC for Debugger Mode: a C++ debugger on GDB that runs inside the browser, so learners can step through their code.",
+      "Rebuilt a complex side panel where the team can iterate quickly, and built Focus Mode, a distraction-free way to solve problems; engagement went up 60%.",
+    ],
   },
   {
     id: "mazinda",
@@ -32,7 +36,11 @@ export const workExperiencesData: WorkExperienceItem[] = [
     companyUrl: "https://mazinda.com",
     period: "Dec 2024 — Feb 2025",
     summary:
-      "Shipped the delivery-partner app and dispatch backend for 200+ daily orders; order-assignment time down 30%.",
+      "Delivery-partner app, dispatch backend, and admin tooling for 200+ daily orders.",
+    description: [
+      "Built the order-assignment backend with dynamic reassignment on rejection, real-time GPS tracking, and background alarm alerts that work with the app closed.",
+      "Built resumable partner onboarding and an admin dashboard to manage 50+ delivery personnel, live orders, and withdrawals.",
+    ],
   },
   {
     id: "iabtm",
@@ -41,6 +49,10 @@ export const workExperiencesData: WorkExperienceItem[] = [
     companyUrl: "https://iambetterthanme.com",
     period: "Sep 2024 — Dec 2024",
     summary:
-      "Built an agentic flow that generates a personalised growth path for each user, realtime video collaboration using Mediasoup for 100+ concurrent users, plus auth, RBAC, and two-factor login.",
+      "Backend, realtime, and auth for a personal-growth community product.",
+    description: [
+      "Built an agentic flow that generates a personalised growth path for each user, and pub/sub notifications across the platform.",
+      "Built realtime video collaboration using Mediasoup for 100+ concurrent users, plus auth, RBAC, and two-factor login.",
+    ],
   },
 ];
