@@ -24,7 +24,7 @@ export function HeroSection() {
 
       <p className="mb-5">
         In open source, I built the{" "}
-        <span className={`${mark} bg-[#EDE9FE] text-[#6D28D9] dark:bg-transparent dark:text-[#c4b5fd]`}>
+        <span className={`${mark} bg-[#D6F3EC] text-[#0F766E] dark:bg-transparent dark:text-[#5fd3c0]`}>
           VMM control-socket layer
         </span>{" "}
         in urunc, a Go container runtime that runs unikernels as sandboxes, and
@@ -33,7 +33,7 @@ export function HeroSection() {
 
       <p className="mb-5">
         On the product side, I have built{" "}
-        <span className={`${mark} bg-[#F0FDFA] text-[#0F766E] dark:bg-transparent dark:text-[#5fd3c0]`}>
+        <span className={`${mark} bg-[#EFEBFA] text-[#5B4BA8] dark:bg-transparent dark:text-[#B9A9F5]`}>
           agentic systems,
         </span>{" "}
         browser extensions, mobile apps, and web platforms.
