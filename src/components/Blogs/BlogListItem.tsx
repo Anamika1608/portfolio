@@ -45,7 +45,7 @@ const BlogListItem = ({ title, description, imageUrl, blogUrl, date, readTimeMin
             {description}
           </p>
           <div className="mt-2 font-mono text-[13px] text-subtle flex items-center gap-2">
-            <span>{new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' })}</span>
+            <time dateTime={date}>{new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' })}</time>
             <span>•</span>
             <span>{readTimeMinutes} min read</span>
           </div>

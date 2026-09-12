@@ -14,7 +14,7 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({ experiences }) => (
           key={experience.id}
           className="grid gap-1.5 py-6 first:pt-0 last:pb-0 sm:grid-cols-[10rem_minmax(0,1fr)] sm:gap-6"
         >
-          <p className="whitespace-nowrap font-mono text-[13px] text-subtle sm:pt-1">{experience.period}</p>
+          <time className="whitespace-nowrap font-mono text-[13px] text-subtle sm:pt-1">{experience.period}</time>
 
           <div>
             <h3 className="font-medium">
