@@ -1,98 +1,51 @@
-"use client"
-
 import React from 'react';
-import { motion } from 'framer-motion';
+import { ArrowUpRight } from 'lucide-react';
+import { Section } from '@/components/ui/Section';
+
+const quotes = [
+    {
+        text: 'What impressed me most was her ability to thrive in a true startup environment: ambiguous problems, fast feedback loops, tight timelines. She asks sharp questions, ships thoughtfully, writes maintainable code, and balances user experience with engineering rigor. I would rehire Anamika in a heartbeat.',
+        name: 'Raj Vikramaditya',
+        role: 'Founder, takeUforward · ex-Google, Amazon',
+        href: 'https://www.linkedin.com/in/anamikaaggarwal12/details/recommendations/',
+        hrefLabel: 'LinkedIn',
+    },
+    {
+        text: 'Anamika is a talented programmer with a passion for learning new things and remarkable initiative and communication skills. Thanks to her, we finally got SAML and OpenID Connect support in Consul Democracy, which were two of the features people had been requesting the most.',
+        name: 'Javi Martín',
+        role: 'Core maintainer, ',
+        org: 'Consul Democracy',
+        orgUrl: 'https://consuldemocracy.org/',
+    },
+];
 
 function Reccomendations() {
     return (
-        <div className="site-container mb-8">
-            {/* Header */}
-            <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="flex justify-start transition-transform duration-700 ease-out mt-12 mb-4"
-            >
-                <div className="border border-black rounded-full px-3 sm:px-4 py-1 transition-all duration-700 ease-out">
-                    <h2 className="text-xl sm:text-2xl font-crimson font-medium">
-                        Words of Appreciation
-                    </h2>
-                </div>
-            </motion.div>
-
-            {/* Recommendations Flex Container */}
-            <div className="flex flex-col sm:flex-row gap-6 mt-8">
-                {/* TUF Recommendation */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    transition={{
-                        duration: 0.6,
-                        ease: "easeOut",
-                        delay: 0.2
-                    }}
-                    className="flex-1 relative overflow-hidden rounded-xl shadow-lg"
-                >
-                    <motion.img
-                        src="/reccomendations/tuf-beige.png"
-                        alt="TUF Recommendation"
-                        className="w-full h-auto rounded-xl block"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{
-                            duration: 0.8,
-                            delay: 0.4
-                        }}
-                        style={{ display: 'block' }}
-                    />
-                </motion.div>
-
-                {/* Consul and IABTM Recommendations */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    transition={{
-                        duration: 0.6,
-                        ease: "easeOut",
-                        delay: 0.4
-                    }}
-                    className="flex-1 relative overflow-hidden rounded-xl"
-                >
-                    <motion.div
-                        className="rounded-xl"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{
-                            duration: 0.8,
-                            delay: 0.6
-                        }}
-                    >
-                        <img
-                            src="/reccomendations/consul-purple.png"
-                            alt="Consul Recommendation"
-                            className="w-full h-auto rounded-xl mt-5 shadow-sm block"
-                            style={{ display: 'block' }}
-                        />
-                    </motion.div>
-                    <motion.div
-                        className="rounded-xl"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{
-                            duration: 0.8,
-                            delay: 0.8
-                        }}
-                    >
-                        <img
-                            src="/reccomendations/iabtm-green.png"
-                            alt="IABTM Recommendation"
-                            className="w-full h-auto rounded-xl mt-10 shadow-sm block"
-                            style={{ display: 'block' }}
-                        />
-                    </motion.div>
-                </motion.div>
+        <Section title="Recommendations">
+            <div className="divide-y divide-border">
+                {quotes.map((q) => (
+                    <figure key={q.name} className="py-6 first:pt-0 last:pb-0">
+                        <blockquote className="font-crimson text-[17px] leading-[1.55] text-foreground/90">
+                            “{q.text}”
+                        </blockquote>
+                        <figcaption className="mt-3 text-[13px] text-muted">
+                            <span className="text-foreground">{q.name}</span> · {q.role}
+                            {q.org && (
+                                <a href={q.orgUrl} target="_blank" rel="noopener noreferrer" className="hover:text-foreground underline underline-offset-4 decoration-subtle">
+                                    {q.org}
+                                </a>
+                            )}
+                            {q.href && (
+                                <a href={q.href} target="_blank" rel="noopener noreferrer" className="ml-2 inline-flex items-center gap-0.5 hover:text-foreground">
+                                    {q.hrefLabel} <ArrowUpRight className="h-3 w-3" />
+                                </a>
+                            )}
+                        </figcaption>
+                    </figure>
+                ))}
             </div>
-        </div>
-    )
+        </Section>
+    );
 }
 
 export default Reccomendations;

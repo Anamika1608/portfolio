@@ -3,6 +3,15 @@
 
 export const blogData = [
   {
+    id: 0,
+    title: "Publish your first app on Google Play",
+    description: "A first-timer walkthrough of Google Play Console: app setup, store listing, and screenshots.",
+    imageUrl: "/blogs/google-play.png",
+    blogUrl: "https://medium.com/@anamikagg07/publish-your-first-app-on-google-play-4c3695aae735",
+    date: "2026-01-27",
+    readTimeMinutes: 3,
+  },
+  {
     id: 1,
     title: "OAuth and OpenID Connect",
     description: "We often confuse OIDC and OAuth, as their functionality is similar, but they are not the same.",
@@ -14,7 +23,7 @@ export const blogData = [
   {
     id: 2,
     title: "Write your first automated detox test in react-native",
-    description: "This article will cover everything you need to write your first test for Agentic AI Testing in React Native using Detox and Wix Pilot.",
+    description: "Your first Detox test for a React Native app, using Wix Pilot.",
     imageUrl: "/blogs/agentic-testing.png", // Example image name
     blogUrl: "https://medium.com/@anamikagg07/write-your-first-automated-detox-test-in-react-native-7a2da568e95a",
     date: "2025-07-10",

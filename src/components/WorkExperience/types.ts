@@ -2,15 +2,11 @@ interface WorkExperienceItem {
   id: string;
   role: string;
   company: string;
-  companyLogo?: string;
+  companyUrl?: string;
   period: string;
+  summary: string;
   description?: string[];
-  summary?: string;
-  tags?: string[];
   stack?: string[];
-  impactLabels?: string[];
-  isExpandable?: boolean;
-  isExpanded?: boolean;
 }
 
 export type { WorkExperienceItem };

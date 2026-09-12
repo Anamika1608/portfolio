@@ -1,45 +1,28 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Crimson_Pro, JetBrains_Mono, VT323, EB_Garamond, IBM_Plex_Mono } from "next/font/google";
+import { Crimson_Pro, Geist, Geist_Mono } from "next/font/google";
+import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
-
-const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
-  subsets: ["latin"],
-});
 
 const crimson = Crimson_Pro({
   variable: "--font-crimson",
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
-});
-
-const jetbrains = JetBrains_Mono({
-  variable: "--font-jetbrains",
-  subsets: ["latin"],
-});
-
-const vt323 = VT323({
-  variable: "--font-vt323",
-  subsets: ["latin"],
-  weight: ["400"],
-});
-
-const garamond = EB_Garamond({
-  variable: "--font-garamond",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
-const ibmPlexMono = IBM_Plex_Mono({
-  variable: "--font-ibm-plex",
-  subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
 
+const geist = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
-  title: "Hi, I'm Anamika",
-  description: "Developing things that makes sense.",
+  title: "Anamika Aggarwal",
+  description: "Software engineer building backend systems, infra, and developer tools.",
 };
 
 export default function RootLayout({
@@ -49,8 +32,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${jakarta.variable} ${crimson.variable} ${jetbrains.variable} ${vt323.variable} ${garamond.variable} ${ibmPlexMono.variable} antialiased`}>
-        {children}
+      <body className={`${crimson.variable} ${geist.variable} ${geistMono.variable}`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

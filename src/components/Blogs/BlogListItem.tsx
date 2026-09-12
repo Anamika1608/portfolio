@@ -18,34 +18,34 @@ const BlogListItem = ({ title, description, imageUrl, blogUrl, date, readTimeMin
       href={blogUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="block group py-8"
+      className="block group py-6 first:pt-0 last:pb-0"
     >
       {/* Default to a column layout, but switch to a row on screens 'sm' (640px) and wider */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
         
         {/* ====== Image ====== */}
         {/* On mobile, it's full-width with a fixed height. On larger screens, it's a fixed size. */}
-        <div className="relative w-full h-48 sm:w-48 sm:h-32 flex-shrink-0">
+        <div className="relative w-full h-40 sm:w-40 sm:h-24 flex-shrink-0">
           <Image
             src={imageUrl}
             alt={`Thumbnail for ${title}`}
-            layout="fill"
-            objectFit="contain" // This ensures your image is never cropped
-            className="rounded-lg shadow-sm transition-transform duration-300 group-hover:scale-105"
+            fill
+            sizes="(max-width: 640px) 90vw, 160px"
+            className="rounded-sm border border-border object-cover object-top dark:brightness-90"
           />
         </div>
         
         {/* ====== Text Content ====== */}
         {/* The top margin here only applies on mobile to create space below the image. */}
         <div className="flex-1 mt-4 sm:mt-0">
-          <h3 className="text-xl sm:text-2xl font-bold mb-2 text-gray-900 group-hover:text-gray-600 transition-colors duration-300">
+          <h3 className="font-medium mb-1 group-hover:underline underline-offset-4">
             {title}
           </h3>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-muted">
             {description}
           </p>
-          <div className="mt-2 text-sm text-gray-500 flex items-center gap-2">
-            <span>{new Date(date).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+          <div className="mt-2 font-mono text-[13px] text-subtle flex items-center gap-2">
+            <span>{new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' })}</span>
             <span>•</span>
             <span>{readTimeMinutes} min read</span>
           </div>

@@ -1,90 +1,40 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import { FiExternalLink, FiGithub } from 'react-icons/fi';
+import { ArrowUpRight } from 'lucide-react';
 import { ProjectCardProps } from './ProjectCard.types';
 
-export const ProjectCard = ({
-  title,
-  description,
-  techStack,
-  imageUrl,
-  liveUrl,
-  repoUrl,
-  variant
-}: ProjectCardProps) => {
+export const ProjectCard = ({ title, description, imageUrl, liveUrl, repoUrl }: ProjectCardProps) => {
+  const href = liveUrl ?? repoUrl;
   return (
-    <div className="bg-[#F9FAFB] rounded-lg shadow-md overflow-hidden h-full flex flex-col">
-      {/* Tech stack pills at the top */}
-      {/* <div className="p-3 flex gap-2 flex-wrap">
-        {techStack.map((tech, index) => (
-          <span
-            key={index}
-            className="px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-full"
-          >
-            {tech}
-          </span>
-        ))}
-      </div> */}
-
-      {/* Project image - fixed ratio container */}
-      <div className="px-2 pt-2">
-        <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
-          {liveUrl ? (
-            <Link href={liveUrl} target="_blank">
-              <Image
-                src={imageUrl}
-                alt={title}
-                fill
-                sizes="(max-width: 640px) 90vw, (max-width: 768px) 45vw, (max-width: 1024px) 30vw, 25vw"
-                // style={{ objectFit: 'cover' }}
-                className="transition-transform duration-300 "
-              />
-            </Link>
-          ) : (
-            <Image
-              src={imageUrl}
-              alt={title}
-              fill
-              sizes="(max-width: 640px) 90vw, (max-width: 768px) 45vw, (max-width: 1024px) 30vw, 25vw"
-              // style={{ objectFit: 'cover' }}
-              className="transition-transform duration-300 "
-            />
-          )}
+    <article className="group">
+      <a href={href} target="_blank" rel="noopener noreferrer" className="block">
+        <div className="relative aspect-[16/10] overflow-hidden rounded-md border border-border bg-surface dark:[&_img]:brightness-90">
+          <Image
+            src={imageUrl}
+            alt={title}
+            fill
+            sizes="(max-width: 640px) 90vw, 480px"
+            className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+          />
         </div>
-      </div>
-
-      {/* Content section */}
-      <div className="p-4 flex flex-col flex-grow bg-[#F9FAFB]">
-        <h3 className="font-crimson text-xl font-medium leading-tight text-gray-900 mb-2">
-          {title}
-        </h3>
-
-        <p className="font-ibm-plex text-sm text-gray-600 mb-4 flex-grow">{description}</p>
-
-        {/* Links */}
-        <div className="flex gap-3 mt-auto">
-          {liveUrl && (
-            <Link
-              href={liveUrl}
-              target="_blank"
-              className="flex items-center gap-1 border border-gray-200 text-gray-800 px-3 py-1.5 rounded-full font-ibm-plex text-sm font-medium bg-white transition"
-            >
-              <FiExternalLink className="text-sm" />
-              <span>Live</span>
-            </Link>
-          )}
-          {repoUrl && (
-            <Link
-              href={repoUrl}
-              target="_blank"
-              className="flex items-center gap-1  bg-white text-gray-800 border border-gray-200  px-3 py-1.5 rounded-full font-ibm-plex text-sm font-medium transition"
-            >
-              <FiGithub className="text-sm" />
-              <span>Code</span>
-            </Link>
-          )}
+      </a>
+      <div className="mt-4">
+        <div className="flex items-baseline justify-between gap-3">
+          <h3 className="font-medium">{title}</h3>
+          <div className="flex gap-3 text-[13px] text-subtle">
+            {liveUrl && (
+              <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-0.5 hover:text-foreground">
+                live <ArrowUpRight className="h-3 w-3" />
+              </a>
+            )}
+            {repoUrl && (
+              <a href={repoUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-0.5 hover:text-foreground">
+                code <ArrowUpRight className="h-3 w-3" />
+              </a>
+            )}
+          </div>
         </div>
+        <p className="mt-1 text-muted">{description}</p>
       </div>
-    </div>
+    </article>
   );
 };

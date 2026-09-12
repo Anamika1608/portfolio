@@ -1,59 +1,57 @@
 export interface OpenSourceContribution {
     id: string;
+    project: string;
+    projectUrl: string;
     title: string;
-    organization: string;
-    description: string;
-    technologies: string[];
-    achievements: string[];
-    links: {
-        prs?: string;
-        website?: string;
-        github?: string;
-    };
-    logo: string;
-    period: string;
-    status: 'active' | 'completed';
+    description?: string;
+    prs: number;
+    anchor: string;
 }
 
+export const contributionsRepo = 'https://github.com/Anamika1608/open-source-contributions';
+
+// Ordered by weight, not PR count.
 export const openSourceContributions: OpenSourceContribution[] = [
     {
+        id: 'urunc',
+        project: 'urunc',
+        projectUrl: 'https://github.com/urunc-dev/urunc',
+        title: 'Lifecycle management of sandbox monitors',
+        description: 'Control-socket layer for Firecracker, QEMU and Cloud Hypervisor in a Go unikernel container runtime: API boot modes, graceful shutdown, and the guest-side handler.',
+        prs: 7,
+        anchor: 'urunc',
+    },
+    {
         id: 'consul-democracy',
-        logo: '/work-experience/logos/consul.png',
-        title: 'SAML and OIDC authentication',
-        organization: 'Consul Democracy',
-        description: 'Implemented SAML & OIDC auth with multi-tenancy, wrote RSpec tests, and deployed via Capistrano.',
-        technologies: ['Ruby', 'Docker', 'Capistrano', 'SAML', 'OIDC', 'Rspec Testing'],
-        achievements: [
-            'Enterprise-grade authentication system',
-            'Multi-tenancy support implementation',
-            'Production-ready deployment setup'
-        ],
-        links: {
-            prs: '#',
-            website: 'https://consuldemocracy.org',
-            github: 'https://github.com/consuldemocracy/consuldemocracy'
-        },
-        period: 'Jun 2025 - Aug 2025',
-        status: 'completed'
+        project: 'Consul Democracy',
+        projectUrl: 'https://github.com/consuldemocracy/consuldemocracy',
+        title: 'SAML and OIDC single sign-on',
+        description: 'SAML and OIDC sign-on with per-tenant configuration for a citizen-participation platform used by city governments.',
+        prs: 3,
+        anchor: 'consul',
+    },
+    {
+        id: 'dataframe',
+        project: 'dataframe',
+        projectUrl: 'https://github.com/DataHaskell/dataframe',
+        title: 'Join bug fix and Parquet read-option docs and tests',
+        prs: 3,
+        anchor: 'dataframe',
+    },
+    {
+        id: 'p4lang',
+        project: 'p4lang',
+        projectUrl: 'https://github.com/p4lang',
+        title: 'Automated monthly release workflows',
+        prs: 2,
+        anchor: 'p4lang',
     },
     {
         id: 'cilium',
-        logo: '/work-experience/logos/cilium.png',
-        title: 'Features & bug fixes (13 PRs)',
-        organization: 'Cilium.io',
-        description: 'Integrated dark theme, fixed major bugs to improve ux and analysed website for SEO, AEO & AIO optimization.',
-        technologies: ['Gatsby', 'React', 'Tailwind CSS', 'SEO', 'JavaScript'],
-        achievements: [
-            '13 PRs successfully merged',
-            'Dark theme integration',
-            'Major bug fixes and improvements'
-        ],
-        links: {
-            prs: '#',
-            website: 'https://cilium.io',
-            github: 'https://github.com/cilium/cilium.io'
-        },
-        period: 'July 2025 - Aug 2025',
-        status: 'active'
-    }
+        project: 'cilium.io',
+        projectUrl: 'https://github.com/cilium/cilium.io',
+        title: 'Dark theme end to end, plus mobile layout fixes',
+        prs: 13,
+        anchor: 'cilium',
+    },
 ];
