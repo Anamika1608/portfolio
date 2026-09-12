@@ -26,7 +26,7 @@
 
 .dark {
   color-scheme: dark;
-  --background: #111110;
+  --background: #1C1C1E;
   --foreground: #eeeeec;
   --muted: #b5b3ad;
   --subtle: #8f8d86;
@@ -54,6 +54,6 @@
 @layer utilities {
   /* One column, aligned with the hero */
   .site-container {
-    @apply max-w-[46rem] mx-auto px-5 sm:px-8;
+    @apply max-w-[50rem] mx-auto px-5 sm:px-8;
   }
 }

@@ -5,7 +5,7 @@ const mark =
 
 export function HeroSection() {
   return (
-    <section className="site-container pt-8 pb-4 sm:pt-12 sm:pb-8 font-crimson text-xl sm:text-2xl md:text-3xl tracking-tight leading-snug">
+    <section className="site-container pt-8 pb-4 sm:pt-12 sm:pb-8 font-crimson [&>p]:max-w-[42rem] text-xl sm:text-2xl md:text-3xl tracking-tight leading-snug">
       <h1 className="font-normal">Hi, I'm Anamika Aggarwal</h1>
 
       <p className="font-normal mb-6 sm:mb-8">
@@ -20,12 +20,16 @@ export function HeroSection() {
 
       <p className="font-normal mb-6 sm:mb-8">
         I've worked across startups and open source on observability, sandbox
-        runtimes, authentication, and CI. I've also won 3 hackathons.
+        runtimes, authentication, and CI.
+        <br className="hidden sm:block" />
+        I've also won 3 hackathons.
       </p>
 
       <p className="font-normal mb-6 sm:mb-8">
-        Most recently at Zenact, I cut sandbox worker bootstrap{" "}
-        <span className={`${mark} bg-[#FFF3DA] text-[#A85800] dark:bg-transparent dark:text-[#e6b04a]`}>
+        Most recently at Zenact,
+        <br className="hidden sm:block" />
+        I cut sandbox worker bootstrap{" "}
+        <span className={`${mark} whitespace-nowrap bg-[#FFF3DA] text-[#A85800] dark:bg-transparent dark:text-[#e6b04a]`}>
           from 12s to 3s.
         </span>
       </p>
