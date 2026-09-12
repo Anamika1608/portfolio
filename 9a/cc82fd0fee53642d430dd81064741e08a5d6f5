@@ -1,0 +1,50 @@
+src/app/api/profile/route.ts
+  s_63d822635fe054::t_45078c7071356f 1-8
+src/data/profile.ts
+  s_63d822635fe054::t_2bac908b530c40 49
+  s_63d822635fe054::t_5cdace5a28b2e5 35
+  s_63d822635fe054::t_a34948f6bbc2ad 1-27,46-48,50-64
+  s_63d822635fe054::t_4226d6bde68fdc 28-34,36-45
+src/components/Navbar/Header.tsx
+  s_63d822635fe054::t_61c8b5006943c9 7-10,12
+src/app/profile.md/route.ts
+  s_63d822635fe054::t_45078c7071356f 1-10
+src/app/layout.tsx
+  s_63d822635fe054::t_076ab976097e5b 5,25-83,94-97
+src/components/Reccomendations/recommendationsData.ts
+  s_63d822635fe054::t_a34948f6bbc2ad 1-16
+src/app/robots.ts
+  s_63d822635fe054::t_076ab976097e5b 1-24
+src/app/sitemap.ts
+  s_63d822635fe054::t_076ab976097e5b 1-12
+src/lib/profileMarkdown.ts
+  s_63d822635fe054::t_4226d6bde68fdc 11-14,16
+  s_63d822635fe054::t_45078c7071356f 1-10,17-54
+  s_63d822635fe054::t_5cdace5a28b2e5 15
+src/components/MoreProjects/MoreProjects.tsx
+  s_63d822635fe054::t_a34948f6bbc2ad 4
+src/components/Reccomendations/Reccomendations.tsx
+  s_63d822635fe054::t_a34948f6bbc2ad 4
+src/components/MoreProjects/otherProjectsData.ts
+  s_63d822635fe054::t_a34948f6bbc2ad 1-4
+src/app/llms.txt/route.ts
+  s_63d822635fe054::t_45078c7071356f 1-10
+src/components/Contact/Contact.tsx
+  s_63d822635fe054::t_61c8b5006943c9 7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "9acc82fd0fee53642d430dd81064741e08a5d6f5",
+  "prompts": {},
+  "sessions": {
+    "s_63d822635fe054": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d09eaac8-491c-4a44-a56d-0935cb7a7dfc",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Anamika Aggarwal <anamikaagg18@gmail.com>"
+    }
+  }
+}
