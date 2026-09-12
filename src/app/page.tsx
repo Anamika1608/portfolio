@@ -14,6 +14,7 @@ export default function Home() {
   return (
     <div>
       <Header />
+      <main>
       <HeroSection />
       <WorkExperience experiences={workExperiencesData} />
       <OpenSource />
@@ -22,6 +23,7 @@ export default function Home() {
       <Blogs/>
       <Reccomendations/>
       <Contact/>
+      </main>
     </div>
   );
 }

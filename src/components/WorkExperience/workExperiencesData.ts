@@ -5,6 +5,7 @@ export const workExperiencesData: WorkExperienceItem[] = [
     id: "zenact",
     role: "Software Engineer",
     company: "Zenact",
+    stack: ["Go", "Python", "AWS", "Temporal", "Docker", "OpenTelemetry", "Axiom", "Blacksmith", "GitHub Actions"],
     companyUrl: "https://zenact.ai",
     period: "Feb 2026 — May 2026",
     summary:
@@ -20,6 +21,7 @@ export const workExperiencesData: WorkExperienceItem[] = [
     id: "tuf",
     role: "SWE Intern",
     company: "takeUforward",
+    stack: ["Go", "C++", "GDB", "Docker", "React", "TypeScript"],
     companyUrl: "https://takeuforward.org",
     period: "Jun 2025 — Aug 2025",
     summary:
@@ -33,6 +35,7 @@ export const workExperiencesData: WorkExperienceItem[] = [
     id: "mazinda",
     role: "SDE Intern",
     company: "Mazinda",
+    stack: ["React Native", "Node.js", "Express", "MongoDB", "GPS", "Maps", "push notifications"],
     companyUrl: "https://mazinda.com",
     period: "Dec 2024 — Feb 2025",
     summary:
@@ -46,6 +49,7 @@ export const workExperiencesData: WorkExperienceItem[] = [
     id: "iabtm",
     role: "Full Stack Developer",
     company: "I am Better than me",
+    stack: ["Node.js", "Socket.io", "Mediasoup", "pub/sub", "Cloudinary", "Twilio", "LLM APIs"],
     companyUrl: "https://iambetterthanme.com",
     period: "Sep 2024 — Dec 2024",
     summary:

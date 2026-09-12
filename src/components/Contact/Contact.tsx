@@ -1,14 +1,13 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { Section } from '@/components/ui/Section';
+import { profile } from '@/data/profile';
 
 const links = [
-  { href: 'mailto:anamikaagg18@gmail.com', label: 'anamikaagg18@gmail.com' },
-  { href: 'https://cal.com/anamikaagg', label: 'Book a call' },
-  { href: 'https://github.com/Anamika1608', label: 'GitHub' },
-  { href: 'https://www.linkedin.com/in/anamikaaggarwal12', label: 'LinkedIn' },
-  { href: 'https://x.com/anamika_agg', label: 'X' },
-  { href: 'https://medium.com/@anamikagg07', label: 'Medium' },
+  { href: `mailto:${profile.email}`, label: profile.email, rel: undefined as 'me' | undefined },
+  ...profile.links
+    .filter((l) => l.label !== 'Resume')
+    .map((l) => ({ href: l.url, label: l.label, rel: l.rel })),
 ];
 
 function Contact() {
@@ -23,7 +22,7 @@ function Contact() {
             <a
               href={l.href}
               target={l.href.startsWith('mailto:') ? undefined : '_blank'}
-              rel="noopener noreferrer"
+              rel={l.rel ? `me noopener noreferrer` : 'noopener noreferrer'}
               className="inline-flex items-center gap-0.5 text-foreground no-underline hover:underline underline-offset-4"
             >
               {l.label} <ArrowUpRight className="h-3 w-3 text-subtle" />

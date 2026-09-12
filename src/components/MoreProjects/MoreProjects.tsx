@@ -1,11 +1,8 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { Section } from '@/components/ui/Section';
+import { otherProjects as projects } from './otherProjectsData';
 
-const projects = [
-  { name: 'github-analyser', note: 'GitHub activity to Parquet, analysed with Haskell dataframe', href: 'https://github.com/Anamika1608/github-analyser' },
-  { name: 'defiGuard', note: 'Web3 wallet: send and receive ETH via MetaMask', href: 'https://github.com/Anamika1608/defiGuard' },
-];
 
 function MoreProjects() {
   return (

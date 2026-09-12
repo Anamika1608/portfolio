@@ -5,14 +5,14 @@ const mark =
 
 export function HeroSection() {
   return (
-    <section className="site-container pt-8 pb-4 sm:pt-12 sm:pb-8 font-crimson text-xl sm:text-2xl leading-[1.4] tracking-tight [&>p]:max-w-[42rem]">
-      <p className="mb-5">
+    <header className="site-container pt-8 pb-4 sm:pt-12 sm:pb-8 font-crimson text-xl sm:text-2xl leading-[1.4] tracking-tight [&>p]:max-w-[42rem] [&>h1]:max-w-[42rem]">
+      <h1 className="mb-5 font-normal">
         Hi, I'm Anamika Aggarwal, a{" "}
         <span className={`${mark} bg-[#DAF0FF] text-[#003CAE] dark:bg-transparent dark:text-[#8ab4ff]`}>
           software engineer
         </span>{" "}
         working on backend systems, developer tools, and runtime infrastructure.
-      </p>
+      </h1>
 
       <p className="mb-5">
         Most recently at Zenact, I owned observability, CI, and customer-data
@@ -51,6 +51,6 @@ export function HeroSection() {
           Resume
         </a>
       </p>
-    </section>
+    </header>
   );
 }
