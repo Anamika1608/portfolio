@@ -1,0 +1,22 @@
+src/components/Hero/HeroSection.tsx
+  s_63d822635fe054::t_699d98a9ecb5d7 8,23-25,29-32
+src/app/globals.css
+  s_63d822635fe054::t_7f78bf769abb52 57
+  s_63d822635fe054::t_4c8c0adfc6f4f9 29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "394f597c9b77363ea772c0dc5f9f7ac9a9acff01",
+  "prompts": {},
+  "sessions": {
+    "s_63d822635fe054": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d09eaac8-491c-4a44-a56d-0935cb7a7dfc",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Anamika Aggarwal <anamikaagg18@gmail.com>"
+    }
+  }
+}
