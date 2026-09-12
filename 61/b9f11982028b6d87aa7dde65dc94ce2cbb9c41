@@ -1,0 +1,32 @@
+src/components/WorkExperience/workExperiencesData.ts
+  s_63d822635fe054::t_069f52294abc0b 26
+  s_63d822635fe054::t_92bb04edabe4ea 33
+  s_63d822635fe054::t_c45c02d05b47d8 9,24,42
+src/components/Navbar/Header.tsx
+  s_63d822635fe054::t_f8f9d3cf1951ac 7
+src/components/Reccomendations/Reccomendations.tsx
+  s_63d822635fe054::t_18d790b90944a8 16-18,33-37
+  s_63d822635fe054::t_b3369318b352dc 11,40
+src/components/WorkExperience/WorkExperience.tsx
+  s_63d822635fe054::t_c45c02d05b47d8 15,17
+src/components/Blogs/BlogListItem.tsx
+  s_63d822635fe054::t_749bffc3db06ff 34
+src/components/FeaturedProjects/ProjectCard.tsx
+  s_63d822635fe054::t_749bffc3db06ff 10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "61b9f11982028b6d87aa7dde65dc94ce2cbb9c41",
+  "prompts": {},
+  "sessions": {
+    "s_63d822635fe054": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d09eaac8-491c-4a44-a56d-0935cb7a7dfc",
+        "model": "unknown"
+      },
+      "human_author": "Anamika Aggarwal <anamikaagg18@gmail.com>"
+    }
+  }
+}
