@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# anamikaagg.com
 
-## Getting Started
+Personal site of Anamika Aggarwal, software engineer. Next.js 15, Tailwind v4, light and dark themes.
 
-First, run the development server:
+## Run
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Edit content
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+All copy lives in data files, not components:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Section | File |
+|---|---|
+| Identity, links, highlights | `src/data/profile.ts` |
+| Work | `src/components/WorkExperience/workExperiencesData.ts` |
+| Open source | `src/components/OpenSource/OpenSourceData.ts` |
+| Featured projects | `src/components/FeaturedProjects/FeaturedProjects.ts` |
+| Other projects | `src/components/MoreProjects/otherProjectsData.ts` |
+| Writing | `src/components/Blogs/BlogData.ts` |
+| Recommendations | `src/components/Reccomendations/recommendationsData.ts` |
 
-## Learn More
+The hero text is in `src/components/Hero/HeroSection.tsx`.
 
-To learn more about Next.js, take a look at the following resources:
+## For agents and crawlers
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Every machine-readable surface is generated from `src/data/profile.ts`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| URL | What |
+|---|---|
+| `/llms.txt` | Full profile as markdown ([llms.txt](https://llmstxt.org) convention) |
+| `/profile.md` | Same markdown, human-guessable path |
+| `/api/profile` | Same data as JSON |
+| `/` with `Accept: text/markdown` | Returns the markdown profile ([acceptmarkdown.com](https://acceptmarkdown.com)); responses carry `Vary: Accept` |
+| `/robots.txt` | Allows GPTBot, ClaudeBot, PerplexityBot, Google-Extended and others |
+| `/sitemap.xml` | Page plus the URLs above |
 
-## Deploy on Vercel
+The homepage embeds JSON-LD (`Person`, `WebSite`) and Open Graph tags. Unknown paths return HTTP 404; clients asking for `text/markdown` get a markdown body with recovery links.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+curl -H "Accept: text/markdown" https://anamikaagg.com/
+```
