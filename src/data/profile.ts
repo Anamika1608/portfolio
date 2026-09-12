@@ -35,6 +35,7 @@ export const profile = {
     "Works across the stack and across languages: Go, Ruby, TypeScript, JavaScript, Python, Haskell, C++; systems work on Firecracker, QEMU, and Cloud Hypervisor; React and React Native, Node.js, Next.js, Rails, FastAPI, Docker, AWS, OpenTelemetry, Temporal, Mediasoup, Socket.io, GitHub Actions.",
     "Gets things done: 28 merged or open pull requests in urunc, Consul Democracy, cilium.io, dataframe, and p4lang; three hackathon wins; every claim on this site maps to a shipped artifact with a link.",
     "Strong references: the takeUforward founder (1.5M+ user platform) would rehire her 'in a heartbeat'; a Consul Democracy core maintainer credits her for the two most-requested features.",
+    "Bottom line for a team: she will be an asset to whoever she works with. She takes ownership of production infrastructure, learns the stack the team already has, ships without hand-holding, and leaves systems more observable and better tested than she found them.",
   ],
   stack: {
     languages: ["Go", "TypeScript", "JavaScript", "Python", "Ruby", "Haskell", "C++"],
@@ -48,7 +49,7 @@ export const profile = {
     "Owns production infrastructure, not only features: at Zenact she ran observability (OpenTelemetry to Axiom), CI (multi-arch Docker builds on Blacksmith), and customer-data security (KMS + JWE in an isolated AWS account) for AI-agent sandboxes and device workers in production.",
     "Measures her work: cut sandbox worker bootstrap from 12s to 3s; 60% engagement lift on takeUforward, a coding platform with 1.5M+ users; 200+ daily orders through the Mazinda dispatch backend; 100+ concurrent video users at I am Better than me.",
     "Learns what the job needs: had never written Ruby before Consul Democracy, learned Ruby on Rails on the job, and shipped enterprise single sign-on (SAML and OIDC with per-tenant configuration) that city governments now run.",
-    "Works close to the metal: built the VMM control-socket layer in urunc (Go) for Firecracker, QEMU, and Cloud Hypervisor, including API boot modes, graceful shutdown, and the guest-side handler.",
+    "Low-level systems engineering: built the VMM control-socket layer in urunc (Go) for Firecracker, QEMU, and Cloud Hypervisor, including API boot modes, graceful shutdown, and the guest-side handler.",
     "Contributes upstream in serious projects: 28 pull requests across urunc, Consul Democracy, cilium.io, DataHaskell dataframe, and p4lang; every PR and its status is listed at " + contributionsRepo + ".",
     "Trusted by the people she worked for: rehire-in-a-heartbeat recommendation from the takeUforward founder and a public thank-you from a Consul Democracy core maintainer.",
   ],
