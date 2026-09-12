@@ -1,55 +1,43 @@
 "use client";
 
+const mark =
+  "px-1 -mx-0.5 rounded-sm [box-decoration-break:clone] [-webkit-box-decoration-break:clone]";
+
 export function HeroSection() {
   return (
-    <section className="site-container max-w-4xl pb-10 sm:pb-16 font-crimson text-xl sm:text-2xl md:text-3xl tracking-tight leading-snug">
-      <h1 className="font-medium">Hi, I'm Anamika Aggarwal</h1>
+    <section className="site-container pt-8 pb-4 sm:pt-12 sm:pb-8 font-crimson text-xl sm:text-2xl md:text-3xl tracking-tight leading-snug">
+      <h1 className="font-normal">Hi, I'm Anamika Aggarwal</h1>
 
-      {/* First Paragraph */}
-      <p className="font-medium mb-6 sm:mb-8">
+      <p className="font-normal mb-6 sm:mb-8">
         a{" "}
-        <span className="bg-[#DAF0FF] text-[#003CAE] px-1 font-medium mr-1">
+        <span className={`${mark} bg-[#DAF0FF] text-[#003CAE] dark:bg-transparent dark:text-[#8ab4ff]`}>
           Software engineer
-        </span>
-        building AI products,
-        <br />
-        developer tools, and production-grade backend systems.
-      </p>
-
-      {/* Second Paragraph */}
-      <p className="font-medium mb-6 sm:mb-8">
-        I've worked across
-        <span className="bg-[#E9FFD9] text-[#2B7500] px-1 font-medium mx-1">
-          startups and open source
-        </span>
+        </span>{" "}
+        working on backend systems,{" "}
         <br className="hidden sm:block" />
-        building products from scratch,
-        improving latency and cutting AI costs.
+        developer tools, and runtime infrastructure.
       </p>
 
-      {/* Updated Hackathon Paragraph Color */}
-      <p className="font-medium mb-6 sm:mb-8">
-        I've also{" "}
-        <span className="bg-[#F0FDFA] text-[#0F766E] px-1 font-medium">
-          won 3 hackathons.
+      <p className="font-normal mb-6 sm:mb-8">
+        I've worked across startups and open source on observability, sandbox
+        runtimes, authentication, and CI. I've also won 3 hackathons.
+      </p>
+
+      <p className="font-normal mb-6 sm:mb-8">
+        Most recently at Zenact, I cut sandbox worker bootstrap{" "}
+        <span className={`${mark} bg-[#FFF3DA] text-[#A85800] dark:bg-transparent dark:text-[#e6b04a]`}>
+          from 12s to 3s.
         </span>
       </p>
 
-      <p className="font-medium mb-6 sm:mb-8">
-        On my journey, I've developed
-        <span className="bg-[#FFF3DA] text-[#A85800] px-1 ml-2 font-medium mr-1">
-          full stack web & app, <br className="hidden sm:block" />
-          browser extensions and AI based products.
-        </span>
-      </p>
-
-      <p className="text-sm sm:text-base md:text-2xl text-gray-800 max-w-2xl mt-6 tracking-tight leading-normal">
-        I'm open for new opportunities.
-        <a
-          href="mailto:anamikaagg18@gmail.com"
-          className="bg-[#DBEAFE] text-[#1E40AF] px-2 py-1 ml-2 font-medium rounded-md hover:bg-opacity-90 transition-colors"
-        >
-          Contact Me
+      <p className="mt-8 font-sans text-[15px] leading-normal text-muted tracking-normal">
+        Open to backend and infra roles ·{" "}
+        <a href="mailto:anamikaagg18@gmail.com" className="text-foreground underline underline-offset-4 decoration-subtle hover:decoration-foreground">
+          Email
+        </a>{" "}
+        ·{" "}
+        <a href="/resume" target="_blank" rel="noopener noreferrer" className="text-foreground underline underline-offset-4 decoration-subtle hover:decoration-foreground">
+          Resume
         </a>
       </p>
     </section>

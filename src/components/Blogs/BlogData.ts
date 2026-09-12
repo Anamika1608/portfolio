@@ -14,7 +14,7 @@ export const blogData = [
   {
     id: 2,
     title: "Write your first automated detox test in react-native",
-    description: "This article will cover everything you need to write your first test for Agentic AI Testing in React Native using Detox and Wix Pilot.",
+    description: "Your first Detox test for a React Native app, using Wix Pilot.",
     imageUrl: "/blogs/agentic-testing.png", // Example image name
     blogUrl: "https://medium.com/@anamikagg07/write-your-first-automated-detox-test-in-react-native-7a2da568e95a",
     date: "2025-07-10",

@@ -1,47 +1,45 @@
-"use client"
-
 import React from 'react';
-import { motion } from 'framer-motion';
-import ContributionCard from './ContributionCard';
-import { openSourceContributions } from './OpenSourceData';
-import ContributionLinksCard from './ContributionLinksCard'; 
+import { ArrowUpRight } from 'lucide-react';
+import { Section } from '@/components/ui/Section';
+import { contributionsRepo, openSourceContributions } from './OpenSourceData';
 
 function OpenSource() {
   return (
-    <div className="site-container">
-      {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="flex justify-start transition-transform duration-700 ease-out mt-12 mb-4"
-      >
-        <div className="border border-black rounded-full px-3 sm:px-4 py-1 transition-all duration-700 ease-out hover:shadow-md">
-          <h2 className="text-xl sm:text-2xl font-crimson font-medium">
-            Open Source
-          </h2>
-        </div>
-      </motion.div>
-
-      <div className="flex flex-wrap justify-center md:justify-start items-center gap-3 -ml-3">
-        {openSourceContributions.map((contribution, index) => (
-          <React.Fragment key={contribution.id}>
-            <ContributionCard
-              contribution={contribution}
-              index={index}
-            />
-            
-            {/* {index === 0 && (
-              <ContributionLinksCard
-                githubUrl="https://github.com/Anamika1608/my-oss-contributions" 
-                docUrl="https://docs.google.com/document/d/1Rnlqb7fQ8YahFWe1r-_R1ufJh5j8e6CJzo4phvOBpGg/edit?usp=sharing"
-                index={index + 0.5} 
-              />
-            )} */}
-          </React.Fragment>
+    <Section title="Open source">
+      <div className="divide-y divide-border">
+        {openSourceContributions.map((c) => (
+          <article key={c.id} className="flex flex-col gap-1 py-4 first:pt-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+            <div className="min-w-0">
+              <h3 className="font-medium">
+                <a href={c.projectUrl} target="_blank" rel="noopener noreferrer" className="hover:underline underline-offset-4">
+                  {c.project}
+                </a>
+                <span className="text-muted font-normal"> · {c.title}</span>
+              </h3>
+              {c.description && (
+                <p className="mt-1 text-muted">{c.description}</p>
+              )}
+            </div>
+            <a
+              href={`${contributionsRepo}#${c.anchor}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex shrink-0 items-center gap-0.5 font-mono text-[13px] text-subtle hover:text-foreground"
+            >
+              {c.prs} PRs <ArrowUpRight className="h-3 w-3" />
+            </a>
+          </article>
         ))}
       </div>
-    </div>
-  )
+      <p className="mt-6 text-muted">
+        Every pull request, with status, is listed in{' '}
+        <a href={contributionsRepo} target="_blank" rel="noopener noreferrer" className="text-foreground underline underline-offset-4 decoration-subtle hover:decoration-foreground">
+          one place
+        </a>
+        .
+      </p>
+    </Section>
+  );
 }
 
 export default OpenSource;

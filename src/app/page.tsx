@@ -15,9 +15,9 @@ export default function Home() {
     <div>
       <Header />
       <HeroSection />
-      <ProjectGrid projects={projectData} />
       <WorkExperience experiences={workExperiencesData} />
       <OpenSource />
+      <ProjectGrid projects={projectData} />
       <MoreProjects />
       <Blogs/>
       <Reccomendations/>
