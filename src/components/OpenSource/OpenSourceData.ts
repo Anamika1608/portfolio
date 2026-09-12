@@ -6,6 +6,7 @@ export interface OpenSourceContribution {
     description?: string;
     prs: number;
     anchor: string;
+    stack?: string[];
 }
 
 export const contributionsRepo = 'https://github.com/Anamika1608/open-source-contributions';
@@ -14,6 +15,7 @@ export const contributionsRepo = 'https://github.com/Anamika1608/open-source-con
 export const openSourceContributions: OpenSourceContribution[] = [
     {
         id: 'urunc',
+        stack: ['Go', 'Firecracker', 'QEMU', 'Cloud Hypervisor', 'unikernels', 'Unix sockets', 'QMP'],
         project: 'urunc',
         projectUrl: 'https://github.com/urunc-dev/urunc',
         title: 'Lifecycle management of sandbox monitors',
@@ -23,6 +25,7 @@ export const openSourceContributions: OpenSourceContribution[] = [
     },
     {
         id: 'consul-democracy',
+        stack: ['Ruby on Rails', 'SAML', 'OIDC', 'RSpec', 'Capistrano'],
         project: 'Consul Democracy',
         projectUrl: 'https://github.com/consuldemocracy/consuldemocracy',
         title: 'SAML and OIDC single sign-on',
@@ -32,6 +35,7 @@ export const openSourceContributions: OpenSourceContribution[] = [
     },
     {
         id: 'dataframe',
+        stack: ['Haskell', 'Parquet'],
         project: 'dataframe',
         projectUrl: 'https://github.com/DataHaskell/dataframe',
         title: 'Join bug fix and Parquet read-option docs and tests',
@@ -40,6 +44,7 @@ export const openSourceContributions: OpenSourceContribution[] = [
     },
     {
         id: 'p4lang',
+        stack: ['GitHub Actions', 'release automation'],
         project: 'p4lang',
         projectUrl: 'https://github.com/p4lang',
         title: 'Automated monthly release workflows',
@@ -48,6 +53,7 @@ export const openSourceContributions: OpenSourceContribution[] = [
     },
     {
         id: 'cilium',
+        stack: ['Gatsby', 'React', 'Tailwind CSS', 'JavaScript'],
         project: 'cilium.io',
         projectUrl: 'https://github.com/cilium/cilium.io',
         title: 'Dark theme end to end, plus mobile layout fixes',

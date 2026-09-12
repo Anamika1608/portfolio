@@ -39,10 +39,6 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({ experiences }) => (
                 ))}
               </ul>
             )}
-
-            {experience.stack && (
-              <p className="mt-3 font-mono text-[13px] text-subtle">{experience.stack.join(" · ")}</p>
-            )}
           </div>
         </article>
       ))}

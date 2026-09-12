@@ -22,12 +22,14 @@ export function profileToMarkdown(p: Profile): string {
     push("", `### ${w.company} — ${w.role} (${w.period})`, "", w.summary);
     if (w.companyUrl) push(`Company: ${w.companyUrl}`);
     if (w.description?.length) push("", ...w.description.map((d) => `- ${d}`));
+    if (w.stack?.length) push("", `Stack: ${w.stack.join(", ")}`);
   }
 
   push("", "## Open source", "", `Every pull request, with status: ${p.contributionsRepo}`);
   for (const o of p.openSource) {
     push("", `### ${o.project} — ${o.title} (${o.prs} PRs)`, `Project: ${o.projectUrl}`, `Pull requests: ${p.contributionsRepo}#${o.anchor}`);
     if (o.description) push("", o.description);
+    if (o.stack?.length) push(`Stack: ${o.stack.join(", ")}`);
   }
 
   push("", "## Featured projects");
