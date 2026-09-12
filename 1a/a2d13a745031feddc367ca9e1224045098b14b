@@ -1,0 +1,19 @@
+src/data/profile.ts
+  s_63d822635fe054::t_3bd5dccfee4a5a 36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "1aa2d13a745031feddc367ca9e1224045098b14b",
+  "prompts": {},
+  "sessions": {
+    "s_63d822635fe054": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d09eaac8-491c-4a44-a56d-0935cb7a7dfc",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Anamika Aggarwal <anamikaagg18@gmail.com>"
+    }
+  }
+}
