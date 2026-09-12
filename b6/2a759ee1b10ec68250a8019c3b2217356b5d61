@@ -1,0 +1,20 @@
+src/app/globals.css
+  s_63d822635fe054::t_125f41d9927db5 51-53
+  s_63d822635fe054::t_ca7f0a869b206a 50,54
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "b62a759ee1b10ec68250a8019c3b2217356b5d61",
+  "prompts": {},
+  "sessions": {
+    "s_63d822635fe054": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d09eaac8-491c-4a44-a56d-0935cb7a7dfc",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Anamika Aggarwal <anamikaagg18@gmail.com>"
+    }
+  }
+}
