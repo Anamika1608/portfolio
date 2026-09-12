@@ -1,0 +1,26 @@
+src/components/WorkExperience/workExperiencesData.ts
+  s_63d822635fe054::t_9e2c36554c5af9 39-40,43
+  s_63d822635fe054::t_3c088fd77b9443 26-27,30
+  s_63d822635fe054::t_ccb60379ac2b45 52-56
+  s_63d822635fe054::t_7d77941d53b098 42
+  s_63d822635fe054::t_ce75f371a3f16f 41
+  s_63d822635fe054::t_1cf530032bbef8 29
+  s_63d822635fe054::t_8c7f9bc5bfee8e 11
+  s_63d822635fe054::t_40219439bcb00c 28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "f87ddc796c1df721a05bc06fac10a129bb37bfc0",
+  "prompts": {},
+  "sessions": {
+    "s_63d822635fe054": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d09eaac8-491c-4a44-a56d-0935cb7a7dfc",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Anamika Aggarwal <anamikaagg18@gmail.com>"
+    }
+  }
+}
