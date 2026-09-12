@@ -31,7 +31,7 @@ const BlogListItem = ({ title, description, imageUrl, blogUrl, date, readTimeMin
             alt={`Thumbnail for ${title}`}
             fill
             sizes="(max-width: 640px) 90vw, 160px"
-            className="rounded-md border border-border object-cover object-top dark:brightness-90"
+            className="rounded-sm border border-border object-cover object-top dark:brightness-90"
           />
         </div>
         

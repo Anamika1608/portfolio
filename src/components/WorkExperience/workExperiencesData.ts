@@ -6,7 +6,7 @@ export const workExperiencesData: WorkExperienceItem[] = [
     role: "Software Engineer",
     company: "Zenact",
     companyUrl: "https://zenact.ai",
-    period: "2026",
+    period: "Feb 2026 — May 2026",
     summary:
       "Runtime infra for AI-agent sandboxes: observability, security, and CI for device-worker fleets.",
     description: [
@@ -21,16 +21,16 @@ export const workExperiencesData: WorkExperienceItem[] = [
     role: "SWE Intern",
     company: "takeUforward",
     companyUrl: "https://takeuforward.org",
-    period: "2025",
+    period: "Jun 2025 — Aug 2025",
     summary:
-      "Built a GDB-backed C++ Debugger Mode and a distraction-free Focus Mode for a 1.5M-learner platform; engagement up 60%.",
+      "Built a GDB-backed C++ Debugger Mode and a distraction-free Focus Mode for a 1.5M+ learner platform; engagement up 60%.",
   },
   {
     id: "mazinda",
     role: "SDE Intern",
     company: "Mazinda",
     companyUrl: "https://mazinda.com",
-    period: "2024 — 2025",
+    period: "Dec 2024 — Feb 2025",
     summary:
       "Shipped the delivery-partner app and dispatch backend for 200+ daily orders; order-assignment time down 30%.",
   },
@@ -39,7 +39,7 @@ export const workExperiencesData: WorkExperienceItem[] = [
     role: "Full Stack Developer",
     company: "I am Better than me",
     companyUrl: "https://iambetterthanme.com",
-    period: "2024",
+    period: "Sep 2024 — Dec 2024",
     summary:
       "Built realtime video collaboration for 100+ concurrent users, plus auth, RBAC, and two-factor login.",
   },

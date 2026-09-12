@@ -31,14 +31,6 @@ export const openSourceContributions: OpenSourceContribution[] = [
         anchor: 'consul',
     },
     {
-        id: 'cilium',
-        project: 'cilium.io',
-        projectUrl: 'https://github.com/cilium/cilium.io',
-        title: 'Dark theme end to end, plus mobile layout fixes',
-        prs: 13,
-        anchor: 'cilium',
-    },
-    {
         id: 'dataframe',
         project: 'dataframe',
         projectUrl: 'https://github.com/DataHaskell/dataframe',
@@ -53,5 +45,13 @@ export const openSourceContributions: OpenSourceContribution[] = [
         title: 'Automated monthly release workflows',
         prs: 2,
         anchor: 'p4lang',
+    },
+    {
+        id: 'cilium',
+        project: 'cilium.io',
+        projectUrl: 'https://github.com/cilium/cilium.io',
+        title: 'Dark theme end to end, plus mobile layout fixes',
+        prs: 13,
+        anchor: 'cilium',
     },
 ];

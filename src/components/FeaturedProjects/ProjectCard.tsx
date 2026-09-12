@@ -7,7 +7,7 @@ export const ProjectCard = ({ title, description, imageUrl, liveUrl, repoUrl }: 
   return (
     <article className="group">
       <a href={href} target="_blank" rel="noopener noreferrer" className="block">
-        <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-border bg-surface dark:[&_img]:brightness-90">
+        <div className="relative aspect-[16/10] overflow-hidden rounded-md border border-border bg-surface dark:[&_img]:brightness-90">
           <Image
             src={imageUrl}
             alt={title}

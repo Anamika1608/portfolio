@@ -12,9 +12,9 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({ experiences }) => (
       {experiences.map((experience) => (
         <article
           key={experience.id}
-          className="grid gap-1.5 py-6 first:pt-0 last:pb-0 sm:grid-cols-[7rem_minmax(0,1fr)] sm:gap-6"
+          className="grid gap-1.5 py-6 first:pt-0 last:pb-0 sm:grid-cols-[10rem_minmax(0,1fr)] sm:gap-6"
         >
-          <p className="font-mono text-[13px] text-subtle sm:pt-1">{experience.period}</p>
+          <p className="whitespace-nowrap font-mono text-[13px] text-subtle sm:pt-1">{experience.period}</p>
 
           <div>
             <h3 className="font-medium">
