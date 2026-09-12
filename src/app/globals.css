@@ -47,7 +47,11 @@
   }
 
   ::selection {
-    @apply bg-foreground text-background;
+    background: rgba(28, 28, 30, 0.12);
+  }
+
+  .dark ::selection {
+    background: rgba(250, 249, 246, 0.18);
   }
 }
 
