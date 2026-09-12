@@ -1,0 +1,25 @@
+src/app/profile.md/route.ts
+  s_63d822635fe054::t_58a56730a41352 8
+src/middleware.ts
+  s_63d822635fe054::t_58a56730a41352 1-33
+src/app/llms.txt/route.ts
+  s_63d822635fe054::t_58a56730a41352 8
+src/lib/accept.ts
+  s_63d822635fe054::t_58a56730a41352 1-37
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "1c981042e3093ffd9ece0e02a7cd04b4853f1203",
+  "prompts": {},
+  "sessions": {
+    "s_63d822635fe054": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d09eaac8-491c-4a44-a56d-0935cb7a7dfc",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Anamika Aggarwal <anamikaagg18@gmail.com>"
+    }
+  }
+}
