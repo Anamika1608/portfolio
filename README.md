@@ -1,6 +1,6 @@
 # anamikaagg.com
 
-Personal site of Anamika Aggarwal, software engineer. Next.js 15, Tailwind v4, light and dark themes.
+Personal site of Anamika Aggarwal, software engineer.
 
 ## Run
 
