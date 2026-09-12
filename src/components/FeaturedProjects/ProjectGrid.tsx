@@ -8,7 +8,7 @@ interface ProjectGridProps {
 }
 
 export const ProjectGrid = ({ projects }: ProjectGridProps) => (
-  <Section title="Selected projects">
+  <Section title="Featured projects">
     <div className="grid gap-x-8 gap-y-10 sm:grid-cols-2">
       {projects.slice(0, 4).map((project) => (
         <ProjectCard key={project.title} {...project} />
