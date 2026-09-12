@@ -1,0 +1,20 @@
+src/components/WorkExperience/workExperiencesData.ts
+  s_63d822635fe054::t_1cafa41561f70f 11
+  s_63d822635fe054::t_06fceed041e078 44
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "fc7c6f690fcb88dcd2a333c378c9468986e9f5ea",
+  "prompts": {},
+  "sessions": {
+    "s_63d822635fe054": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d09eaac8-491c-4a44-a56d-0935cb7a7dfc",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Anamika Aggarwal <anamikaagg18@gmail.com>"
+    }
+  }
+}
