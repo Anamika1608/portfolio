@@ -1,0 +1,26 @@
+src/components/Hero/HeroSection.tsx
+  s_63d822635fe054::t_d501e1eb6270b5 4,8-10,12,14,17,25,41
+  s_63d822635fe054::t_c8a3b24d7a5d9f 18
+  s_63d822635fe054::t_5896d51b3c03f4 27
+  s_63d822635fe054::t_0294ff67eb5d95 42
+  s_63d822635fe054::t_49097975ca4fe4 20,36
+  s_63d822635fe054::t_78d5dce532a67d 26,28-31,35,37-39
+  s_63d822635fe054::t_b4352a0b97064c 32-34
+  s_63d822635fe054::t_a42494e68fd7a3 19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "28c4ff2e392984412e642a5292862caae974bbcf",
+  "prompts": {},
+  "sessions": {
+    "s_63d822635fe054": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d09eaac8-491c-4a44-a56d-0935cb7a7dfc",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Anamika Aggarwal <anamikaagg18@gmail.com>"
+    }
+  }
+}
