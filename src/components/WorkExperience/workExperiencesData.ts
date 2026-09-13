@@ -11,10 +11,11 @@ export const workExperiencesData: WorkExperienceItem[] = [
     summary:
       "Runtime infrastructure for AI-agent sandboxes: observability, security, and CI for sandbox and device workers.",
     description: [
-      "Cut sandbox worker bootstrap from 12s to 3s by removing blocking OpenTelemetry waits and pre-warming sandbox binaries.",
-      "Shipped OpenTelemetry logs and traces to Axiom across Temporal workflows for sandbox and device workers, in Go.",
-      "Built customer data encryption in an isolated AWS account with KMS and JWE; internal staff cannot read it.",
-      "Built a QA workflow builder that runs ordered test suites from GitHub pull requests, and added multi-arch Docker builds on Blacksmith to CI.",
+      "Integrated an end-to-end OpenTelemetry + Axiom pipeline (OTLP collectors, Go, Docker, AWS, Temporal) capturing logs and traces for sandbox and device-worker runtimes.",
+      "Optimized sandbox worker bootstrap from 12s to 3s by removing blocking OTel readiness waits and pre-warming E2B binaries.",
+      "Shipped Blacksmith multi-arch Docker builds in the CI/CD pipeline and automated QA assertion and report generation.",
+      "Implemented end-to-end customer data encryption in an isolated AWS account with KMS and JWE, enforcing a strict data boundary no internal staff can cross.",
+      "Engineered a QA workflow builder that composes and runs ordered test-suite sequences, triggered from GitHub pull requests and token mentions.",
     ],
   },
   {
@@ -27,8 +28,8 @@ export const workExperiencesData: WorkExperienceItem[] = [
     summary:
       "Developer tooling and learning UX for a 1.5M+ learner coding platform.",
     description: [
-      "Led the POC for Debugger Mode: a C++ debugger on GDB that runs inside the browser, so learners can step through their code.",
-      "Rebuilt a complex side panel where the team can iterate quickly, and built Focus Mode, a distraction-free way to solve problems; engagement went up 60%.",
+      "Led the POC for Debugger Mode: a VS Code-like C++ execution engine on Go and GDB, giving learners breakpoints and step-through inside the browser.",
+      "Rebuilt a complex side panel in React and TypeScript into an extensible component the team can iterate on quickly, and introduced Focus Mode; engagement went up 60%.",
     ],
   },
   {
@@ -41,8 +42,8 @@ export const workExperiencesData: WorkExperienceItem[] = [
     summary:
       "Delivery-partner app, dispatch backend, and admin tooling for 200+ daily orders.",
     description: [
-      "Built the order-assignment backend with dynamic reassignment on rejection, real-time GPS tracking, and background alarm alerts that work with the app closed.",
-      "Built resumable partner onboarding and an admin dashboard to manage 50+ delivery personnel, live orders, and withdrawals.",
+      "Developed the order-assignment backend (Node.js) with dynamic reassignment on partner rejection, real-time GPS tracking, and background alarm notifications that fire with the app closed.",
+      "Added a resumable onboarding flow to the React Native partner app and an admin dashboard to onboard 50+ delivery personnel, monitor live orders, and process withdrawals.",
     ],
   },
   {
@@ -55,8 +56,8 @@ export const workExperiencesData: WorkExperienceItem[] = [
     summary:
       "Backend, realtime, and auth for a personal-growth community product.",
     description: [
-      "Built an agentic flow that generates a personalised growth path for each user, and pub/sub notifications across the platform.",
-      "Built realtime video collaboration using Mediasoup for 100+ concurrent users, plus auth, RBAC, and two-factor login.",
+      "Created an LLM-driven agentic flow that generates a personalised growth path per user, and a pub/sub notification system across the platform.",
+      "Shipped realtime video collaboration on Mediasoup (SFU) and Socket.io for 100+ concurrent users, plus auth with RBAC and two-factor login via Twilio.",
     ],
   },
 ];
