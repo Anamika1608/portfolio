@@ -29,7 +29,7 @@ export const openSourceContributions: OpenSourceContribution[] = [
         project: 'Consul Democracy',
         projectUrl: 'https://github.com/consuldemocracy/consuldemocracy',
         title: 'SAML and OIDC single sign-on',
-        description: 'SAML and OIDC sign-on with per-tenant configuration for a citizen-participation platform used by city governments.',
+        description: 'Integrated SAML and OIDC authentication in Ruby on Rails with multi-tenancy support for a citizen-participation platform used by city governments; wrote RSpec tests and deployed via Capistrano.',
         prs: 3,
         anchor: 'consul',
     },
