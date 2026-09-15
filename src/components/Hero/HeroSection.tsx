@@ -39,8 +39,6 @@ export function HeroSection() {
         browser extensions, mobile apps, and web platforms.
       </p>
 
-      <p className="mb-5">I also write sometimes, about what I learn while building.</p>
-
       <p className="mt-8 font-sans text-[15px] leading-normal text-muted tracking-normal">
         Open to backend and infra roles ·{" "}
         <a href="mailto:anamikaagg18@gmail.com" className="text-foreground underline underline-offset-4 decoration-subtle hover:decoration-foreground">
